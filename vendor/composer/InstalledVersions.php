@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'v8.5.9',
-    'version' => '8.5.9.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '8feffcbf4ad2e31a03e1db11a4ed1db835ef71dd',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -43,6 +43,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8d8f88b3b3830916be94292c1fbce84433efb1aa',
+    ),
+    'bacon/bacon-qr-code' => 
+    array (
+      'pretty_version' => '2.0.3',
+      'version' => '2.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3e9d791b67d0a2912922b7b7c7312f4b37af41e4',
     ),
     'brick/math' => 
     array (
@@ -59,6 +68,15 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'dasprid/enum' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5abf82f213618696dda8e3bf6f64dd042d8542b2',
     ),
     'davedevelopment/hamcrest-php' => 
     array (
@@ -446,12 +464,39 @@ private static $installed = array (
         0 => 'v8.25.0',
       ),
     ),
+    'jaybizzle/crawler-detect' => 
+    array (
+      'pretty_version' => 'v1.2.104',
+      'version' => '1.2.104.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a581e89a9212c4e9d18049666dc735718c29de9c',
+    ),
+    'jenssegers/agent' => 
+    array (
+      'pretty_version' => 'v2.6.4',
+      'version' => '2.6.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'daa11c43729510b3700bc34d414664966b03bffe',
+    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
       array (
         0 => '*',
       ),
+    ),
+    'laravel/fortify' => 
+    array (
+      'pretty_version' => 'v1.7.6',
+      'version' => '1.7.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9a5ec8d52145d5b59bc3f130b814f5f285bc71d4',
     ),
     'laravel/framework' => 
     array (
@@ -462,14 +507,23 @@ private static $installed = array (
       ),
       'reference' => '05da44d6823c2923597519ac10151f5827a24f80',
     ),
-    'laravel/laravel' => 
+    'laravel/jetstream' => 
     array (
-      'pretty_version' => 'v8.5.9',
-      'version' => '8.5.9.0',
+      'pretty_version' => 'v2.2.1',
+      'version' => '2.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '36c46858b2dfd0b6b001872ce4d682a31221bb49',
+    ),
+    'laravel/laravel' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8feffcbf4ad2e31a03e1db11a4ed1db835ef71dd',
     ),
     'laravel/sail' => 
     array (
@@ -479,6 +533,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'ce4861be1a528a36c98416c9954f3014d2500415',
+    ),
+    'laravel/sanctum' => 
+    array (
+      'pretty_version' => 'v2.9.0',
+      'version' => '2.9.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'eb191ddfc3ec04bbead33593bf982e871095f25c',
     ),
     'laravel/tinker' => 
     array (
@@ -515,6 +578,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
+    ),
+    'livewire/livewire' => 
+    array (
+      'pretty_version' => 'v2.3.18',
+      'version' => '2.3.18.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c0c78f430e4151fb6902bbb88c75e782d2549e1a',
+    ),
+    'mobiledetect/mobiledetectlib' => 
+    array (
+      'pretty_version' => '2.8.37',
+      'version' => '2.8.37.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9841e3c46f5bd0739b53aed8ac677fa712943df7',
     ),
     'mockery/mockery' => 
     array (
@@ -589,6 +670,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5',
+    ),
+    'paragonie/constant_time_encoding' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c',
     ),
     'phar-io/manifest' => 
     array (
@@ -707,6 +797,15 @@ private static $installed = array (
       ),
       'reference' => 'e7bdf4085de85a825f4424eae52c99a1cec2f360',
     ),
+    'pragmarx/google2fa' => 
+    array (
+      'pretty_version' => '8.0.0',
+      'version' => '8.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '26c4c5cf30a2844ba121760fd7301f8ad240100b',
+    ),
     'psr/container' => 
     array (
       'pretty_version' => '1.0.0',
@@ -784,8 +883,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 

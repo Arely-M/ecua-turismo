@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\rol;
+use App\Models\permiso;
+use App\Models\permiso_rol;
+
 class rolController extends Controller
 {
     /**
@@ -14,7 +18,8 @@ class rolController extends Controller
      */
     public function index()
     {
-        //
+        $roles = rol::all();
+        $permisos = permiso::all();
     }
 
     /**
