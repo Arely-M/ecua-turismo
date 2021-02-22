@@ -18,6 +18,10 @@ Route::resource('persona', personaController::class);
 Route::resource('publicacion', publicacionController::class);
 Route::resource('usuario', usuarioController::class);
 
+Route::get('/inicio', function () {
+    return view('admin/layouts/admin');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
