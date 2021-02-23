@@ -22,6 +22,6 @@ Route::get('/inicio', function () {
     return view('admin/layouts/admin');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
+    return view('admin/layouts/admin');
+})->name('dash');
