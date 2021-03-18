@@ -243,7 +243,7 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text' => 'perfil',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
@@ -251,6 +251,11 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'publicaciones',
+            'url'  => 'publicacion',
+            'icon' => 'fas fa-fw fa-book',
         ],
         [
             'text'    => 'multilevel',

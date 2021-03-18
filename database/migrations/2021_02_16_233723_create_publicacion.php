@@ -15,13 +15,10 @@ class CreatePublicacion extends Migration
     {
         Schema::create('publicacion', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_usuario');
             $table->string('titulo');
             $table->string('ubicacion');
             $table->string('descripcion');
             $table->string('imagen');
-
-            $table->foreign('id_usuario')->references('id')->on('users');
         });
     }
 

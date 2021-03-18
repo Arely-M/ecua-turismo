@@ -22,6 +22,10 @@ Route::get('/inicio', function () {
     return view('admin/layouts/admin');
 });
 
+Route::get('blog', [publicacionController::class, 'blog']);
+
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/publicaciones',  publicacionController::class)->name('publicaciones');*/
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     return view('admin/layouts/admin');
 })->name('dash');

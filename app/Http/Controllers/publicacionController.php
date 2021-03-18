@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\publicacion;
+use Illuminate\Support\Facades\Storage;
 
 class publicacionController extends Controller
 {
@@ -14,7 +16,14 @@ class publicacionController extends Controller
      */
     public function index()
     {
-        //
+        $publicacion = publicacion::all();
+        return view ('admin/publicacion/index', ['publicaciones' => $publicacion]);
+    }
+
+    public function blog()
+    {
+        $publicacion = publicacion::all();
+        return view ('mainPage/Blog', ['publicaciones' => $publicacion]);
     }
 
     /**
@@ -24,7 +33,7 @@ class publicacionController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin/publicacion/create');
     }
 
     /**
@@ -35,7 +44,15 @@ class publicacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $publicacion = new  publicacion();
+        $publicacion->titulo = $request->get('titulo');
+        $publicacion->ubicacion = $request->get('ubicacion');
+        $publicacion->descripcion = $request->get('descripcion');
+        $imagen = $request->file('imagen')->store('public/imagenes');
+        $publicacion->imagen = Storage::url($imagen);
+        $publicacion->save();
+        
+        return redirect('publicacion');
     }
 
     /**
@@ -44,9 +61,9 @@ class publicacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(publicacion $publicacion)
     {
-        //
+        return view ('mainPage/post', ['publicaciones' => $publicacion]);
     }
 
     /**
