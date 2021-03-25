@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\publicacion;
+use App\Models\provincias;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\StorePublicacionRequest;
 
 class publicacionController extends Controller
 {
@@ -26,6 +28,13 @@ class publicacionController extends Controller
         return view ('mainPage/Blog', ['publicaciones' => $publicacion]);
     }
 
+    public function filtrar(provincias $provincia)
+    {
+        $publicacion = publicacion::where('id_provincia', $provincia->id)->get();
+        //return $publicacion;
+        return view ('mainPage/lugares', ['publicaciones' => $publicacion], ['provincias' => $provincia]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -33,7 +42,8 @@ class publicacionController extends Controller
      */
     public function create()
     {
-        return view ('admin/publicacion/create');
+        $provincia = provincias::all();
+        return view ('admin/publicacion/create',  ['provincias' => $provincia]);
     }
 
     /**
@@ -42,18 +52,42 @@ class publicacionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
+        //$publicacion = new  publicacion();
         $publicacion = new  publicacion();
         $publicacion->titulo = $request->get('titulo');
         $publicacion->ubicacion = $request->get('ubicacion');
         $publicacion->descripcion = $request->get('descripcion');
-        $imagen = $request->file('imagen')->store('public/imagenes');
-        $publicacion->imagen = Storage::url($imagen);
+        //$imagen = $request->file('imagen')->store('public/imagenes');
+        //$publicacion->imagen = Storage::url($imagen);
+        if($request->hasFile('imagen')){
+            $publicacion['imagen'] = $request->file('imagen')->store('imagenes','public');
+        }
+        $publicacion->id_provincia = $request->get("provincia_id");
         $publicacion->save();
-        
-        return redirect('publicacion');
+        return redirect('publicacion')->with("info","¡Se ha creado la publicación exitosamente!");
     }
+
+    /*
+    public function store(StorePublicacionRequest $request)
+    {
+        //$publicacion = new  publicacion();
+        $publicacion = publicacion::create($request->except('_token'));
+        $publicacion->titulo = $request->get('titulo');
+        $publicacion->ubicacion = $request->get('ubicacion');
+        $publicacion->descripcion = $request->get('descripcion');
+        //$imagen = $request->file('imagen')->store('public/imagenes');
+        //$publicacion->imagen = Storage::url($imagen);
+        if($request->hasFile('imagen')){
+            $publicacion['imagen'] = $request->file('imagen')->store('imagenes','public');
+        }
+        $publicacion->id_provincia = $request->get("provincia_id");
+        $publicacion->save();
+        return redirect('publicacion')->with("info","¡Se ha creado la publicación exitosamente!");
+    }
+    */
 
     /**
      * Display the specified resource.
@@ -62,6 +96,11 @@ class publicacionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(publicacion $publicacion)
+    {
+        //return view ('mainPage/post', ['publicaciones' => $publicacion]);
+    }
+
+    public function post(publicacion $publicacion)
     {
         return view ('mainPage/post', ['publicaciones' => $publicacion]);
     }
@@ -72,9 +111,10 @@ class publicacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(publicacion $publicacion)
     {
-        //
+        $provincia = provincias::all();
+        return view ('admin/publicacion/edit', ['publicacion' => $publicacion], ['provincias' => $provincia]);
     }
 
     /**
@@ -84,9 +124,15 @@ class publicacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StorePublicacionRequest $request, publicacion $publicacion)
     {
-        //
+        $datos = request()->except(['_token','_method']);
+        if($request->hasFile('imagen')){
+            Storage::delete('public/'.$publicacion->imagen);
+            $datos['imagen'] = $request->file('imagen')->store('imagenes','public');
+        }
+        $publicacion -> update($datos);
+        return redirect()->route('publicacion.index')->with('info','¡La publicacion se actualizo exitosamente!');
     }
 
     /**
@@ -95,8 +141,12 @@ class publicacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(publicacion $publicacion)
     {
-        //
+        $publicacion->delete();
+        if($publicacion->imagen){
+            Storage::delete('public/'.$publicacion->imagen);
+        }
+        return redirect()->route('publicacion.index')->with('info','¡Dato eliminado exitosamente!');;
     }
 }

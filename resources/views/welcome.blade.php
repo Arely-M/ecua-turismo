@@ -17,7 +17,7 @@
         <div class="header-page container-page">
             <nav class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
+                    <a href="/" class="text-decoration-none">
                         <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                     </a>
                 </div>
@@ -27,10 +27,10 @@
                     </div>
                     <ul>
                         <li><a href="/" data-after="Home">INICIO</a></li>
-                        <li><a href="blog" data-after="Service">BLOG</a></li>
-                        <li><a href="#projects" data-after="Projects">LUGARES</a></li>
+                        <li><a href="/blog" data-after="Service">BLOG</a></li>
+                        <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="#contact" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/contacto" data-after="Contact">CONTACTO</a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,7 +45,7 @@
                 <h1>VISITA, <span></span></h1>
                 <h1>LOS MEJORES<span></span></h1>
                 <h1>LUGARES<span></span></h1>
-                <a href="#projects" type="button" class="cta">Leer más</a>
+                <a href="/destinos" type="button" class="cta text-decoration-none">Leer más</a>
             </div>
         </div>
     </section>
@@ -65,53 +65,50 @@
         <div class="content-card m-auto row">
             <div class="col-sm-3 mb-4 rounded">
                 <div class="card card-target rounded">
-                    <img class="card-img-top" src="img/blog1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/lugar1.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h5 class="card-title h3">Vista el teliférico de Quito</h5>
                         <p class="card-text">
-                            With supporting text below as a natural lead-in to additional
-                            content.
+                            Observa la hermosa ciudad de Quito prácticamente desde el cielo
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3 mb-4 rounded">
                 <div class="card card-target">
-                    <img class="card-img-top" src="img/blog2.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/lugar2.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h5 class="card-title h3">Visita las Islas Galápagos</h5>
                         <p class="card-text">
-                            With supporting text below as a natural lead-in to additional
-                            content.
+                            Encuentra diversidad de especies marinas y disfruta los increíbles paísajes
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3 mb-4 rounded">
                 <div class="card card-target">
-                    <img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img/lugar3.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h5 class="card-title h3">Malecón Simón Bolívar</h5>
                         <p class="card-text">
                             With supporting text below as a natural lead-in to additional
                             content.
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3 mb-4 rounded-3">
                 <div class="card card-target rounded-3">
-                    <img class="card-img-top rounded-3" src="img/blog3.jpg" alt="Card image cap">
+                    <img class="card-img-top rounded-3" src="img/lugar4.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h5 class="card-title h3">Laguna de Quilotoa</h5>
                         <p class="card-text">
-                            With supporting text below as a natural lead-in to additional
-                            content.
+                            La lagunas de origen volcánico más hermosas del planeta ubicada en Cotopaxi
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
                     </div>
                 </div>
             </div>
@@ -165,12 +162,9 @@
             <div class="all-projects">
                 <div class="project-item">
                     <div class="project-info">
-                        <h1>Project 1</h1>
-                        <h2>Coding is Love</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum
-                            impedit unde rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo
-                            neque atque libero non sunt harum? Ipsum repellat animi, fugit architecto voluptatum odit
-                            et!</p>
+                        <h1>Monumento mitad del mundo</h1>
+                        <h2 class="text-danger">Pichinca, Quito</h2>
+                        <p class="text-justify">Es uno de los destinos turísticos más visitados de la ciudad de Quito en el Ecuador continental. Algunos de ustedes se preguntarán, ¿vale la pena visitar la Mitad del Mundo? Nuestra respuesta es sí.</p>
                     </div>
                     <div class="project-img">
                         <img src="img/ecuador-4393531_1280.jpg" alt="Ecuador mitad del mundo">
@@ -197,7 +191,7 @@
                     necessitatibus deserunt exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia,
                     accusamus provident suscipit magni! Expedita sint ad dolore, commodi labore nihil velit earum
                     ducimus nulla quae nostrum fugit aut, deserunt reprehenderit libero enim!</p>
-                <a href="#" class="cta">Download Resume</a>
+                <a href="#" class="cta text-decoration-none">Download Resume</a>
             </div>
         </div>
     </section>
@@ -209,7 +203,7 @@
             <div>
                 <h1 class="section-title">CONTACT <span>INFO</span></h1>
             </div>
-            <div class="contact-items">
+            <div class="contact-items ">
                 <div class="contact-item">
                     <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
                     <div class="contact-info">

@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>ECUATURISMO</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -229,22 +229,33 @@ return [
             'search' => true,
             'topnav' => true,
         ],
+        ['header' => 'OPCIONES DE BLOG'],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Crear Publicación',
+            'url'         => 'publicacion/create',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            //'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
         [
-            'text' => 'perfil',
-            'url'  => 'admin/settings',
+            'text' => 'provincias',
+            'url'  => '/provincias',
+            'icon' => 'fas fa-city',
+        ],
+        [
+            'text' => 'publicaciones',
+            'url'  => 'publicacion',
+            'icon' => 'fas fa-fw fa-book',
+        ],
+        ['header' => 'CONFIGURAR CUENTA'],
+        [
+            'text' => 'profile',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
@@ -252,11 +263,7 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        [
-            'text' => 'publicaciones',
-            'url'  => 'publicacion',
-            'icon' => 'fas fa-fw fa-book',
-        ],
+        /*
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -311,6 +318,7 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
+        */
     ],
 
     /*

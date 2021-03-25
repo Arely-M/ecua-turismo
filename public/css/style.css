@@ -910,7 +910,7 @@ p {
 }
 
 .post-image {
-	height: 90vh;
+	height: 70vh;
 	max-width: 100%;
 }
 
@@ -943,4 +943,43 @@ p {
 	}
 	
 }
+
 /*End of publication*/
+
+/*Start of Form */
+
+.form-contact{
+	margin: 10rem auto;
+	width: 55%;
+}
+.form-size {
+	font-size: 2rem;
+}
+
+.form-size input {
+	font-size: 2rem;
+	padding: 2.5rem 1.5rem;
+}
+
+.form-size textarea {
+	font-size: 2rem;
+}
+
+.input-size {
+	margin-bottom: 5rem;
+}
+
+@media (max-width: 900px) {
+	.form-contact{
+		margin: 10rem auto;
+		width: 80%;
+	}
+}
+
+@media (max-width: 600px) {
+	.form-contact{
+		margin: 10rem auto;
+		width: 90%;
+	}
+}
+/*End of Form Contact*/

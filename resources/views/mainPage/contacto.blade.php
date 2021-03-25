@@ -36,36 +36,71 @@
             </nav>
         </div>
     </header>
+
     <!-- End Header -->
-    @if($publicaciones->count())
-        <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
-            <h2 class="publication-title">últimos posts</h2>
+
+    <form class="form-contact p-3 bg-body">
+        <h2 class="publication-title mb-4">Contacto</h2>
+        <div class="form-group form-size">
+            <label for="formGroupExampleInput" class="mt-4">Nombre (obligatorio)</label>
+            <input type="text" class="form-control bg-light input-size" id="formGroupExampleInput" placeholder="Nombre">
         </div>
-        <main class="container-page d-flex flex-column bd-highlight mb-3">
-            @foreach ($publicaciones as $publicacion)
-            <div class="p-2 bd-highlight content-publication">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
-                    </div> 
-                    <div class="col-md-7">
-                        <div class="card-body information-publication">
-                            <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
-                            <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
-                            <p class="publication-description">{{$publicacion->descripcion}}</p>
-                            <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                        </div>
-                    </div>
+        <div class="form-group form-size">
+            <label for="formGroupExampleInput2">Tu email (obligatorio)</label>
+            <input type="text" class="form-control bg-light input-size" id="formGroupExampleInput2" placeholder="Another input placeholder">
+        </div>
+        <div class="form-group form-size">
+            <label for="formGroupExampleInput2">Asunto</label>
+            <input type="text" class="form-control bg-light input-size" id="formGroupExampleInput2" placeholder="Another input placeholder">
+        </div>
+        <div class="form-group form-size">
+            <label for="formGroupExampleInput2">Tu mensaje</label>
+            <textarea class="form-control bg-light input-size" id="exampleFormControlTextarea1" placeholder="" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="button" class="btn-primary form-size p-4 border-0 rounded">Enviar</button>
+        </div>
+    </form>
+    <!--
+            <label class="form-label">Ubicación</label>
+            <div class="mb-3 row">
+                <div class="col-md-4 mb-3">
+                    <input type="text" class="form-control" placeholder="Ciudad">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <select class="form-select" id="provincia" required>
+                        <option selected disabled value="">Provincia...</option>
+                        <option>El Oro</option>
+                        <option>Guayas</option>
+                        <option>Azuay</option>
+                        <option>Esmeraldas</option>
+                        <option>Pichincha</option>
+                        <option>Bolivar</option>
+                        <option>Carchi</option>
+                        <option>Loja</option>
+                        <option>Napo</option>
+                        <option>Pastaza</option>
+                        <option>Francisco de Orellana</option>
+                        <option>Sucumbio</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="email " class="form-control" id="exampleFormControlInput1" placeholder="Ecuador" disabled>
                 </div>
             </div>
-            @endforeach
-        </main>
-    @else
-    <div class="content-publication ml-auto mr-auto text-center min-vh-100" style="margin-top: 14rem">
-        <strong class="text-center publication-title">No hay publicaciones</strong>
-    </div>
-    @endif
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="..." rows="3"></textarea>
+            </div>
+            <div class="previewImagen" id="imagePreview">
 
+            </div>
+            <div class="mb-3 input-group">
+                <input type="file" name="imagen" id="imagen" class="form-control" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            </div>
+            <div class="m-auto">
+                <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+            </div>-->
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
