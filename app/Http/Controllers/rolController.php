@@ -20,6 +20,8 @@ class rolController extends Controller
     {
         $roles = rol::all();
         $permisos = permiso::all();
+        return view('admin/rol/index', ['roles' => $roles, 'permisos' => $permisos]);
+        
     }
 
     /**
@@ -40,7 +42,10 @@ class rolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rol = new rol();
+        $rol->nombre_rol = $request->get('nombre_rol');
+        $rol->estado_rol = 'Activo';
+        $rol->save();
     }
 
     /**
@@ -62,7 +67,10 @@ class rolController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rol = rol::find($id);
+        $permiso = permiso::all();
+        return view('admin/rol/editar', ['rol' => $rol, 'permisos' => $permiso]);
+    
     }
 
     /**
@@ -74,7 +82,10 @@ class rolController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rol = rol::find($id);
+        $rol->nombre_rol = $request->get('nombre_rol');
+        $rol->estado_rol = $request->get('estado_rol');
+        $rol->update();
     }
 
     /**
