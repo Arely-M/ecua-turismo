@@ -37,34 +37,23 @@
         </div>
     </header>
     <!-- End Header -->
-    @if($publicaciones->count())
-        <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
-            <h2 class="publication-title">últimos posts</h2>
+    <main class="d-flex flex-column bd-highlight mb-3 ml-auto mr-auto post-content min-vh-100" style="margin-top: 10rem;">
+        <!--<img src="" class="post-image" alt="imagen de la publicación" style=" margin: 1rem auto;">-->
+        <div class="d-flex flex-column bd-highlight">
+            <h1 class="post-title text-center mt-4">Destinos</h1>
+            <small></small>
+            <p class="text-justify">¿No tienes muy claro a dónde viajar? ¿Estás buscando tu próximo destino para unas vacaciones? Este es el sitio perfecto para que te des una vuelta y encuentres inspiración de lugar al que puedas ir.<br>
+            Para que no te marees con tanto contenido aquí podrás organizarte por continentes y países. Haz click en el mapa o en la lista de países para encontrar todo lo que necesitas para tu viaje.</p>
         </div>
-        <main class="container-page d-flex flex-column bd-highlight mb-3">
-            @foreach ($publicaciones as $publicacion)
-            <div class="p-2 bd-highlight content-publication">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
-                    </div> 
-                    <div class="col-md-7">
-                        <div class="card-body information-publication">
-                            <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
-                            <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
-                            <p class="publication-description">{{$publicacion->descripcion}}</p>
-                            <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <label for="" style="font-size: 2rem;">Lugares para visitar</label>
+            @foreach ($provincias as $provincia)
+            <nav class="nav flex-comun">
+                <a type="button" href="{{route('publicaciones.filtrar', $provincia)}}" style="font-size: 2rem;" class="text-decoration-none">{{$provincia->nombre}}</a>
+            </nav>
             @endforeach
-        </main>
-    @else
-    <div class="content-publication ml-auto mr-auto text-center min-vh-100" style="margin-top: 14rem">
-        <strong class="text-center publication-title">No hay publicaciones</strong>
-    </div>
-    @endif
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer id="footer">

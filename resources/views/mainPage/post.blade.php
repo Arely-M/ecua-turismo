@@ -13,11 +13,11 @@
 
 <body>
     <!-- Header -->
-    <header id="header" style="background-color: black">
+    <header id="header" class="bg-dark">
         <div class="header-page container-page">
             <nav class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
+                    <a href="/" class="text-decoration-none">
                         <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                     </a>
                 </div>
@@ -28,9 +28,9 @@
                     <ul>
                         <li><a href="/" data-after="Home">INICIO</a></li>
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
-                        <li><a href="#projects" data-after="Projects">LUGARES</a></li>
+                        <li><a href="/destnos" data-after="Projects">LUGARES</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="#contact" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/contacto" data-after="Contact">CONTACTO</a></li>
                     </ul>
                 </div>
             </nav>
@@ -39,12 +39,12 @@
 
     <!-- End Hero Section  -->
     <!-- End Header -->
-    <main class="d-flex flex-column bd-highlight mb-3 mt-4 ml-auto mr-auto post-content">
-    <img src="{{$publicaciones->imagen}}" class="post-image" alt="imagen de la publicación" style=" margin: 1rem auto;">
+    <main class="d-flex flex-column bd-highlight mb-3 ml-auto mr-auto post-content" style="margin-top: 5rem">
+        <img src="{{asset('storage').'/'.$publicaciones->imagen}}"  class="post-image" alt="imagen de la publicación" style=" margin: 1rem auto;">
         <div class="d-flex flex-column bd-highlight">
             <h1 class="post-title text-center mt-4">{{$publicaciones->titulo}}</h1>
             <small>{{$publicaciones->ubicacion}}</small>
-            <p class="text-justify">{{$publicaciones->descripcion}}</p>
+            <pre class="text-justify">{{$publicaciones->descripcion}}</pre>
         </div>
     </main>
 

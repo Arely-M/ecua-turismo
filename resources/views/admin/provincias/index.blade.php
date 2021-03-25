@@ -3,46 +3,45 @@
 @section('title', 'Dashboard')
 
 @section('content')
-@if(Session::has('publicación creada'))
-toastr.success("{!!Session::get('publicación creada')!!}")
+@if(session('info'))
+<div id="toast" class="alert alert-success" style="height: 10vh">
+    <strong>{{session('info')}}</strong>
+    <button onclick="cerrar()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
 @endif
 <div class="p-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <div class="p-4">
                 <div class="w-100 mb-4 row justify-content-md-between">
-                    <label class="h4">Lista de publicaciones</label>
-                    <a type="button" class="btn btn-success" href="publicacion/create">Publicar</a>
+                    <label class="h4">Lista de provincias</label>
+                    <a type="button" class="btn btn-success" href="provincias/create">Ingresar</a>
                 </div>
-                @if(session('info'))
-                <div id="toast" class="alert alert-success" style="height: 10vh">
-                    <strong>{{session('info')}}</strong>
-                    <button onclick="cerrar()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                @endif
                 <!--Contenedor de listado de publicaciones-->
-                @if($publicaciones->count())
+                @if($provincias->count())
                     <div>
-                        <table id="publicaciones" class="table table-hover table-striped">
+                        <table id="provincias" class="table table-hover">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Titulo</th>
-                                    <th scope="col">Ubicación</th>
-                                    <th scope="col"></th>
+                                    <th scope="col text-center">id</th>
+                                    <th scope="col">provincia</th>
+                                    <th scope="col">descripcion</th>
+                                    <th scope="col text-center"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($publicaciones as $publicacion)
+                                @foreach ($provincias as $provincia)
                                 <tr>
-                                    <td>{{$publicacion->id}}</td>
-                                    <td>{{$publicacion->titulo}}</td>
-                                    <td>{{$publicacion->ubicacion}}</td>
+                                    <td>{{$provincia->id}}</td>
+                                    <td>{{$provincia->nombre}}</td>
+                                    <td>{{$provincia->descripcion}}</td>
                                     <td>
-                                        <a class="btn btn-primary mr-2" href="{{route('publicacion.edit',$publicacion)}}">Editar</a>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                            Eliminar
-                                        </button>
+                                        <div class="w-100 row justify-content-center">
+                                            <a class="btn btn-primary mr-2" href="{{route('provincias.edit', $provincia)}}">Editar</a>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                                Eliminar
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -50,9 +49,9 @@ toastr.success("{!!Session::get('publicación creada')!!}")
                         </table>
                     </div>
                 @else 
-                <div class="text-center">
-                    <strong >No hay ningún registro</strong>
-                </div>
+                    <div class="text-center">
+                        <strong>No hay ningún registros</strong>
+                    </div>
                 @endif
             </div>
         </div>
@@ -62,18 +61,18 @@ toastr.success("{!!Session::get('publicación creada')!!}")
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Publicación</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ¿Desea eliminar la publicación?
+                    ¿Desea eliminar el registro?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    @if($publicaciones->count())
-                        <form action="{{route('publicacion.destroy', $publicacion)}}" method="POST">
+                    @if($provincias->count())
+                        <form action="{{route('provincias.destroy', $provincia)}}" method="POST">
                             <!--<button type="submit" class="btn btn-danger">Eliminar</button>-->
                             <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                 Eliminar
@@ -98,8 +97,6 @@ toastr.success("{!!Session::get('publicación creada')!!}")
 @stop
 
 @section('js')
-<script>
-    console.log('Hi!');
 </script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
@@ -108,7 +105,7 @@ toastr.success("{!!Session::get('publicación creada')!!}")
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#publicaciones').DataTable({
+        $('#provincias').DataTable({
             responsive: true,
             autowidth: false
         });

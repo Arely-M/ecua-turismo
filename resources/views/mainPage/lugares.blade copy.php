@@ -13,11 +13,11 @@
 
 <body>
     <!-- Header -->
-    <header id="header" class="bg-dark">
+    <header id="header">
         <div class="header-page container-page">
             <nav class="nav-bar">
                 <div class="brand">
-                    <a href="/" class="text-decoration-none">
+                    <a href="#hero">
                         <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                     </a>
                 </div>
@@ -27,44 +27,50 @@
                     </div>
                     <ul>
                         <li><a href="/" data-after="Home">INICIO</a></li>
-                        <li><a href="/blog" data-after="Service">BLOG</a></li>
-                        <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
+                        <li><a href="blog" data-after="Service">BLOG</a></li>
+                        <li><a href="#projects" data-after="Projects">LUGARES</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="/contacto" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="#contact" data-after="Contact">CONTACTO</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <!-- End Header -->
-    @if($publicaciones->count())
-        <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
-            <h2 class="publication-title">últimos posts</h2>
+    
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="hero container-page">
+            <div>
+                <h1>VISITA, <span></span></h1>
+                <h1>LOS MEJORES<span></span></h1>
+                <h1>LUGARES<span></span></h1>
+                <a href="#projects" type="button" class="cta">Leer más</a>
+            </div>
         </div>
-        <main class="container-page d-flex flex-column bd-highlight mb-3">
-            @foreach ($publicaciones as $publicacion)
-            <div class="p-2 bd-highlight content-publication">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
-                    </div> 
-                    <div class="col-md-7">
-                        <div class="card-body information-publication">
-                            <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
-                            <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
-                            <p class="publication-description">{{$publicacion->descripcion}}</p>
-                            <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                        </div>
+    </section>
+    <!-- End Header -->
+    <div class="content-publication ml-auto mr-auto mt-4">
+        <h2 class="publication-title">Provincia: Pichincha</h2>
+    </div>
+    <main class="container-page d-flex flex-column bd-highlight mb-3 mt-4">
+        @foreach ($publicaciones as $publicacion)
+        <div class="p-2 bd-highlight content-publication mt-4">
+            <div class="row no-gutters">
+                <div class="col-md-5">
+                    <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
+                </div> 
+                <div class="col-md-7">
+                    <div class="card-body information-publication">
+                        <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
+                        <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
+                        <p class="publication-description">{{$publicacion->descripcion}}</p>
+                        <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
                     </div>
                 </div>
             </div>
-            @endforeach
-        </main>
-    @else
-    <div class="content-publication ml-auto mr-auto text-center min-vh-100" style="margin-top: 14rem">
-        <strong class="text-center publication-title">No hay publicaciones</strong>
-    </div>
-    @endif
+        </div>
+        @endforeach
+    </main>-->
 
     <!-- Footer -->
     <footer id="footer">
