@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Models\rol;
 use App\Models\permiso;
-use App\Models\permiso_rol;
+use App\Models\rol_permiso;
+use Illuminate\Support\Facades\DB;
 
 class rolController extends Controller
 {
@@ -31,7 +32,8 @@ class rolController extends Controller
      */
     public function create()
     {
-        //
+        $permisos = permiso::all();
+        return view ('admin/rol/create', ['permisos' => $permisos]);
     }
 
     /**
@@ -46,6 +48,17 @@ class rolController extends Controller
         $rol->nombre_rol = $request->get('nombre_rol');
         $rol->estado_rol = 'Activo';
         $rol->save();
+        $rolRegistrado = DB::table('rol')->orderBy('id', 'desc')->first();
+        $permisos = permiso::all();
+        foreach ($permisos as $permiso){  
+            if($request->get('permiso-'.$permiso->id) == 'on'){
+                $permisoRol = new rol_permiso();
+                $permisoRol->id_permiso = $permiso->id;
+                $permisoRol->id_rol = $rolRegistrado->id;
+                $permisoRol->save();
+            }
+        }
+        return redirect('rol');
     }
 
     /**
@@ -56,7 +69,8 @@ class rolController extends Controller
      */
     public function show($id)
     {
-        //
+        $rol = rol::all();
+        return view ('rol', ['rol'=> $rol]);
     }
 
     /**
@@ -69,7 +83,7 @@ class rolController extends Controller
     {
         $rol = rol::find($id);
         $permiso = permiso::all();
-        return view('admin/rol/editar', ['rol' => $rol, 'permisos' => $permiso]);
+        return view('admin/rol/edit', ['rol' => $rol, 'permisos' => $permiso]);
     
     }
 
@@ -86,6 +100,17 @@ class rolController extends Controller
         $rol->nombre_rol = $request->get('nombre_rol');
         $rol->estado_rol = $request->get('estado_rol');
         $rol->update();
+        DB::select('SELECT eliminar_rol_permiso('.$id.')');  //llama funcion de la base de datos
+        $permisos = permiso::all();
+        foreach ($permisos as $permiso){  
+            if($request->get('permiso-'.$permiso->id) == 'on'){
+                $permisoRol = new rol_permiso();
+                $permisoRol->id_permiso = $permiso->id;
+                $permisoRol->id_rol = $id;
+                $permisoRol->save();
+            }
+        }
+        return redirect()->route('rol.index')->with('info','¡Datos actualizados exitosamente!');
     }
 
     /**
@@ -94,8 +119,10 @@ class rolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(rol $rol)
     {
-        //
+        DB::select('SELECT eliminar_rol_permiso('.$rol->id.')');  //llama funcion de la base de datos
+        $rol->delete();
+        return redirect()->route('rol.index', $rol)->with('info','¡Dato eliminado exitosamente!');
     }
 }

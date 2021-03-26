@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\permiso;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class permisoController extends Controller
      */
     public function index()
     {
-        //
+        $permisos = permiso::all();
+        return view('admin/permiso/index', ['permisos' => $permisos]);
+        
     }
 
     /**
@@ -24,7 +27,7 @@ class permisoController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin/permiso/create');
     }
 
     /**
@@ -35,7 +38,12 @@ class permisoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $permiso = new permiso();
+        $permiso->nombre_permiso = $request->get('nombre_permiso');
+        $permiso->ruta_permiso = $request->get('ruta_permiso');
+        $permiso->estado_permiso = 'Activo';
+        $permiso->save();
+        return redirect('permiso');
     }
 
     /**
@@ -46,7 +54,8 @@ class permisoController extends Controller
      */
     public function show($id)
     {
-        //
+        $pemriso = permiso::all();
+        return view ('permiso', ['pemriso'=> $pemriso]);
     }
 
     /**
@@ -57,7 +66,8 @@ class permisoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $permiso = permiso::find($id);
+        return view('admin/permiso/edit', ['permiso' => $permiso]);
     }
 
     /**
@@ -69,7 +79,12 @@ class permisoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $permiso = permiso::find($id);
+        $permiso->nombre_permiso = $request->get('nombre_permiso');
+        $permiso->ruta_permiso = $request->get('ruta_permiso');
+        $permiso->estado_permiso = $request->get('estado_permiso');
+        $permiso->update();
+        return redirect()->route('permiso.index')->with('info','¡Datos actualizados exitosamente!');
     }
 
     /**
@@ -78,8 +93,9 @@ class permisoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(permiso $permiso)
     {
-        //
+        $permiso->delete();
+        return redirect()->route('permiso.index', $permiso)->with('info','¡Dato eliminado exitosamente!');
     }
 }

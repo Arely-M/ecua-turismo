@@ -16,7 +16,7 @@ class CreatePermiso extends Migration
         Schema::create('permiso', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_permiso')->unique();
-            $table->string('ruta_permiso')->unique();
+            $table->string('ruta_permiso')->nullable()->unique();
             $table->string('estado_permiso');
         });
     }

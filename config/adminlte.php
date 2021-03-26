@@ -243,14 +243,24 @@ return [
             'label_color' => 'success',
         ],
         [
-            'text' => 'provincias',
+            'text' => 'Provincias',
             'url'  => '/provincias',
             'icon' => 'fas fa-city',
         ],
         [
-            'text' => 'publicaciones',
+            'text' => 'Publicaciones',
             'url'  => 'publicacion',
             'icon' => 'fas fa-fw fa-book',
+        ],
+        [
+            'text' => 'Permisos',
+            'url'  => 'permiso',
+            'icon' => 'fas fa-shield-alt',
+        ],
+        [
+            'text' => 'Roles',
+            'url'  => 'rol',
+            'icon' => 'fas fa-user-shield',
         ],
         ['header' => 'CONFIGURAR CUENTA'],
         [
