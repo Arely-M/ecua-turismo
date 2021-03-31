@@ -24,8 +24,14 @@ class publicacionController extends Controller
 
     public function blog()
     {
-        $publicacion = publicacion::all();
+        //$publicacion = publicacion::orderBy('id', 'desc')->limit(2)->get();
+        $publicacion = publicacion::paginate(6);
         return view ('mainPage/Blog', ['publicaciones' => $publicacion]);
+    }
+
+    public function galeria()
+    {
+        return view ('mainPage/Galeria');
     }
 
     public function filtrar(provincias $provincia)

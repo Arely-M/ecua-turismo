@@ -15,10 +15,10 @@ toastr.success("{!!Session::get('publicación creada')!!}")
                     <a type="button" class="btn btn-success" href="publicacion/create">Publicar</a>
                 </div>
                 @if(session('info'))
-                <div id="toast" class="alert alert-success" style="height: 10vh">
-                    <strong>{{session('info')}}</strong>
-                    <button onclick="cerrar()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
+                    <div id="toast" class="alert alert-success" style="height: 10vh">
+                        <strong>{{session('info')}}</strong>
+                        <button onclick="cerrar()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
                 @endif
                 <!--Contenedor de listado de publicaciones-->
                 @if($publicaciones->count())

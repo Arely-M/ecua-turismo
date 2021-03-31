@@ -52,7 +52,7 @@ class provinciasController extends Controller
         $provincia->descripcion = $request->get('descripcion');
         $provincia->save();
 
-        return redirect('provincias');
+        return redirect('provincias')->with('info', '¡Se ha registrado la provincia exitosamente!');
     }
 
     /**

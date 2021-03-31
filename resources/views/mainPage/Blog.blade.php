@@ -38,12 +38,13 @@
     </header>
     <!-- End Header -->
     @if($publicaciones->count())
+    <div class="min-vh-100">
         <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
             <h2 class="publication-title">últimos posts</h2>
         </div>
-        <main class="container-page d-flex flex-column bd-highlight mb-3">
+        <main class="d-flex align-items-start flex-column bd-highlight mb-3">
             @foreach ($publicaciones as $publicacion)
-            <div class="p-2 bd-highlight content-publication">
+            <div class="p-2 bd-highlight content-publication mr-auto ml-auto mb-4">
                 <div class="row no-gutters">
                     <div class="col-md-5">
                         <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
@@ -60,12 +61,15 @@
             </div>
             @endforeach
         </main>
+        <div class="content-publication ml-auto mr-auto" style="font-size: 1.5rem;">
+            {{$publicaciones->links()}}
+        </div>
+    </div>
     @else
     <div class="content-publication ml-auto mr-auto text-center min-vh-100" style="margin-top: 14rem">
         <strong class="text-center publication-title">No hay publicaciones</strong>
     </div>
     @endif
-
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">

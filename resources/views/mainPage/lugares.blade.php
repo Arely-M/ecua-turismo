@@ -13,7 +13,7 @@
 
 <body>
     <!-- Header -->
-    <header id="header">
+    <header id="header" class="bg-dark">
         <div class="header-page container-page">
             <nav class="nav-bar">
                 <div class="brand">
@@ -37,12 +37,13 @@
         </div>
     </header>
     <!-- End Header -->
-
-    <div class="content-publication ml-auto mr-auto">
-        <h2 class="publication-title">Provincia: {{$provincias->nombre}}</h2>
+    <!--
+    <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
+        <h2 class="publication-title text-center">{{$provincias->nombre}}</h2>
     </div>
     <main class="container-page d-flex flex-column bd-highlight mb-3 mt-4">
         @foreach ($publicaciones as $publicacion)
+        
         <div class="p-2 bd-highlight content-publication mt-4">
             <div class="row no-gutters">
                 <div class="col-md-5">
@@ -60,6 +61,25 @@
         </div>
         @endforeach
     </main>-->
+    <main class="min-vh-100 mr-auto ml-auto" style="margin-top: 14rem; width: 80%;">
+        <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
+            <h2 class="publication-title text-center">{{$provincias->nombre}}</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2">
+            @foreach ($publicaciones as $publicacion)
+            <div class="col mb-4">
+                <div class="bg-dark text-white">
+                    <img src="{{asset('storage').'/'.$publicacion->imagen}}" class="card-img img-fluid" alt="imagen de la publicacion" style="filter: brightness(60%);">
+                    <div class="card-img-overlay p-5">
+                        <h2 class="card-title">{{$publicacion->titulo}}</h1>
+                        <p class="card-text publication-description text-light">{{$publicacion->descripcion}}</p>
+                        <a type="button" class="btn btn-outline-light" href="{{route('publicaciones.show', $publicacion)}}" style="font-size: 1.5rem;">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer id="footer">

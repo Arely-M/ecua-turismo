@@ -56,12 +56,12 @@
         <div class="services container">
             <div class="service-top">
                 <h1 class="section-title">Los mejores dest<span>i</span>nos</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum deleniti maiores pariatur assumenda quas magni et, doloribus quod voluptate quasi molestiae magnam officiis dolorum, dolor provident atque molestias voluptatum explicabo!</p>
+                <p>Visita los marivillosos lugares del Ecuador, encuentra nuevas aventuras, disfrutas de las mejores vistas y vive una experiencia inolvidable.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-cards w-100">
+    <section class="w-100">
         <div class="content-card m-auto row">
             <div class="col-sm-3 mb-4 rounded">
                 <div class="card card-target rounded">

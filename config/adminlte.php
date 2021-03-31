@@ -85,8 +85,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
 
     /*
@@ -226,7 +226,7 @@ return [
     'menu' => [
         [
             'text' => 'search',
-            'search' => true,
+            'search' => false,
             'topnav' => true,
         ],
         ['header' => 'OPCIONES DE BLOG'],
@@ -252,6 +252,7 @@ return [
             'url'  => 'publicacion',
             'icon' => 'fas fa-fw fa-book',
         ],
+        /*
         [
             'text' => 'Permisos',
             'url'  => 'permiso',
@@ -262,17 +263,20 @@ return [
             'url'  => 'rol',
             'icon' => 'fas fa-user-shield',
         ],
+        */
         ['header' => 'CONFIGURAR CUENTA'],
         [
             'text' => 'profile',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
+        /*
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        */
         /*
         [
             'text'    => 'multilevel',

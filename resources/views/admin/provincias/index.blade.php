@@ -3,12 +3,6 @@
 @section('title', 'Dashboard')
 
 @section('content')
-@if(session('info'))
-<div id="toast" class="alert alert-success" style="height: 10vh">
-    <strong>{{session('info')}}</strong>
-    <button onclick="cerrar()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
-@endif
 <div class="p-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -17,6 +11,12 @@
                     <label class="h4">Lista de provincias</label>
                     <a type="button" class="btn btn-success" href="provincias/create">Ingresar</a>
                 </div>
+                @if(session('info'))
+                    <div id="toast" class="alert alert-success" style="height: 10vh">
+                        <strong>{{session('info')}}</strong>
+                        <button onclick="cerrar()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                @endif
                 <!--Contenedor de listado de publicaciones-->
                 @if($provincias->count())
                     <div>

@@ -28,9 +28,9 @@
                     <ul>
                         <li><a href="/" data-after="Home">INICIO</a></li>
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
-                        <li><a href="/destnos" data-after="Projects">LUGARES</a></li>
+                        <li><a href="/destinos" data-after="Projects">LUGARES</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="/contacto" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/galeria" data-after="Contact">CONTACTO</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,8 +43,8 @@
         <img src="{{asset('storage').'/'.$publicaciones->imagen}}"  class="post-image" alt="imagen de la publicación" style=" margin: 1rem auto;">
         <div class="d-flex flex-column bd-highlight">
             <h1 class="post-title text-center mt-4">{{$publicaciones->titulo}}</h1>
-            <small>{{$publicaciones->ubicacion}}</small>
-            <pre class="text-justify">{{$publicaciones->descripcion}}</pre>
+            <p class="text-danger font-weight-bold">{{$publicaciones->ubicacion}}</p>
+            <p  class="text-justify" style="white-space: pre-wrap">{{$publicaciones->descripcion}}</p>
         </div>
     </main>
 

@@ -38,21 +38,27 @@
     </header>
     <!-- End Header -->
     <main class="d-flex flex-column bd-highlight mb-3 ml-auto mr-auto post-content min-vh-100" style="margin-top: 10rem;">
+    @if($provincias)   
         <!--<img src="" class="post-image" alt="imagen de la publicación" style=" margin: 1rem auto;">-->
         <div class="d-flex flex-column bd-highlight">
             <h1 class="post-title text-center mt-4">Destinos</h1>
             <small></small>
             <p class="text-justify">¿No tienes muy claro a dónde viajar? ¿Estás buscando tu próximo destino para unas vacaciones? Este es el sitio perfecto para que te des una vuelta y encuentres inspiración de lugar al que puedas ir.<br>
             Para que no te marees con tanto contenido aquí podrás organizarte por continentes y países. Haz click en el mapa o en la lista de países para encontrar todo lo que necesitas para tu viaje.</p>
+            <h3 class="h1 text-center font-weight-bold">Provincias para visitar</h3>
         </div>
         <div>
-            <label for="" style="font-size: 2rem;">Lugares para visitar</label>
             @foreach ($provincias as $provincia)
             <nav class="nav flex-comun">
                 <a type="button" href="{{route('publicaciones.filtrar', $provincia)}}" style="font-size: 2rem;" class="text-decoration-none">{{$provincia->nombre}}</a>
             </nav>
             @endforeach
         </div>
+    @else
+        <div class="content-publication ml-auto mr-auto text-center min-vh-100" style="margin-top: 14rem">
+            <strong class="text-center publication-title">No hay publicaciones</strong>
+        </div>
+    @endif
     </main>
 
     <!-- Footer -->

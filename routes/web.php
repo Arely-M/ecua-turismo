@@ -34,6 +34,8 @@ Route::get('/inicio', function () {
 
 Route::get('blog', [publicacionController::class, 'blog']);
 
+Route::get('galeria', [publicacionController::class, 'galeria']);
+
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/publicaciones',  publicacionController::class)->name('publicaciones');*/
 
 /*
