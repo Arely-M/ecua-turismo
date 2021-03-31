@@ -42,7 +42,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                    <textarea class="form-control" name="descripcion" rows="3" required></textarea>
+                    <textarea class="form-control" name="descripcion" rows="6" required></textarea>
                     <div class="valid-feedback">
                         ¡Luce bien!
                     </div>

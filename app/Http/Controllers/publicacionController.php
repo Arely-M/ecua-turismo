@@ -130,7 +130,7 @@ class publicacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StorePublicacionRequest $request, publicacion $publicacion)
+    public function update(Request $request, publicacion $publicacion)
     {
         $datos = request()->except(['_token','_method']);
         if($request->hasFile('imagen')){

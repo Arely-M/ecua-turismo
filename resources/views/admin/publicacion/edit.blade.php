@@ -11,23 +11,29 @@
 <div class="p-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-            <form class="p-4" action="{{route('publicacion.update', $publicacion)}}" method="POST" enctype="multipart/form-data">
+            <form class="p-4 needs-validation" action="{{route('publicacion.update', $publicacion)}}" method="POST" enctype="multipart/form-data" novalidate>
                 @csrf
                 @method('put')
                 <h2>Editar publicación</h2>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Título</label>
-                    <input type="text" class="form-control" name="titulo" aria-describedby="emailHelp" value="{{$publicacion->titulo}}">
-                    @error('titulo')
-                    <small class="text-danger">{{$message}}</small>
-                    @enderror
+                    <input type="text" class="form-control" name="titulo" aria-describedby="emailHelp" value="{{$publicacion->titulo}}" required>>
+                    <div class="valid-feedback">
+                        ¡Luce bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese un título válido
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Dirección</label>
-                    <input type="text" class="form-control" name="ubicacion" value="{{$publicacion->ubicacion}}">
-                    @error('ubicacion')
-                    <small class="text-danger">{{$message}}</small>
-                    @enderror
+                    <input type="text" class="form-control" name="ubicacion" value="{{$publicacion->ubicacion}}" required>
+                    <div class="valid-feedback">
+                        ¡Luce bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese una dirección válida
+                    </div>
                 </div>
                 <div class="form-group col-md-4 p-0">
                     <label for="provincia_id">Provincia</label>
@@ -39,10 +45,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                    <textarea class="form-control" name="descripcion" rows="6">{{$publicacion->descripcion}}</textarea>
-                    @error('descripcion')
-                    <small class="text-danger">{{$message}}</small>
-                    @enderror
+                    <textarea class="form-control" name="descripcion" rows="6" required>{{$publicacion->descripcion}}</textarea>
+                    <div class="valid-feedback">
+                        ¡Luce bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese una descripción válida
+                    </div>
                 </div>
                 <div class="mb-3">
                     <div class="row no-gutters">
@@ -101,5 +110,26 @@
 
             reader.readAsDataURL(file);
         }
+</script>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
 </script>
 @stop

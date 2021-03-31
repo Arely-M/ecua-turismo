@@ -55,7 +55,7 @@
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="/contacto" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/galeria" data-after="Contact">CONTACTO</a></li>
                     </ul>
                 </div>
             </nav>
