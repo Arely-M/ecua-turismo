@@ -60,7 +60,6 @@
             </div>
         </div>
     </section>
-
     <section class="w-100">
         <div class="content-card m-auto row">
             <div class="col-sm-3 mb-4 rounded">

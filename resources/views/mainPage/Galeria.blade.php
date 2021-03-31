@@ -70,50 +70,51 @@
         </div>
         <div class="portfolio-item row p-4">
             <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" alt="">
+                <a href="img/galeria/Cascada Pailamocha, Sucre. Provincia de Manabí.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/Cascada Pailamocha, Sucre. Provincia de Manabí.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/pretty-girl-near-car_1157-16962.jpg" alt="">
+                <a href="img/galeria/columpio del fin del mundo, Baños de Agua Santa. Provincia de Tungurahua.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="/img/galeria/columpio del fin del mundo, Baños de Agua Santa. Provincia de Tungurahua.jpg" alt="">
                 </a>
             </div>
             <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/blonde-tourist-taking-selfie_23-2147978899.jpg" alt="">
+                <a href="img/galeria/el muercielago.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/el muercielago.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/cute-girls-oin-studio_1157-18211.jpg" alt="">
+                <a href="img/galeria/Lago San Pablo, Otavalo,  Imbabura.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/Lago San Pablo, Otavalo,  Imbabura.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girls_1157-18451.jpg" alt="">
+                <a href="img/galeria/laguna de quilotoa.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/laguna de quilotoa.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/stylish-pin-up-girl_1157-18940.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/stylish-pin-up-girl_1157-18940.jpg" alt="">
+                <a href="img/galeria/Mirador mira mera, Mera, Pastaza, Ecuador-2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/Mirador mira mera, Mera, Pastaza, Ecuador-2.jpg" alt="">
                 </a>
             </div>
             <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/digital-laptop-working-global-business-concept_53876-23438.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/digital-laptop-working-global-business-concept_53876-23438.jpg" alt="">
+                <a href="img/galeria/salinas2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/salinas2.jpg" alt="">
                 </a>
             </div>
             <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-psd/set-digital-devices-screen-mockup_53876-76507.jpg" alt="">
+                <a href="img/galeria/Tarabita Manto de la Novia, Baños de Agua Santa. Provincia de Tungurahua 2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/Tarabita Manto de la Novia, Baños de Agua Santa. Provincia de Tungurahua 2.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/young-brunette-woman-with-sunglasses-urban-background_1139-893.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/young-brunette-woman-with-sunglasses-urban-background_1139-893.jpg" alt="">
+                <a href="img/galeria/Volcan Cotopaxi 2 - Latacunga, Provincia de Cotopaxi, República de Ecuador.jpg" class="fancylight popup-btn" data-fancybox-group="light">
+                    <img class="img-fluid" src="img/galeria/Volcan Cotopaxi 2 - Latacunga, Provincia de Cotopaxi, República de Ecuador.jpg" alt="">
                 </a>
             </div>
+            <!--
             <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
                 <a href="https://image.freepik.com/free-psd/laptop-digital-device-screen-mockup_53876-76509.jpg" class="fancylight popup-btn" data-fancybox-group="light">
                     <img class="img-fluid" src="https://image.freepik.com/free-psd/laptop-digital-device-screen-mockup_53876-76509.jpg" alt="">
@@ -274,6 +275,7 @@
                     <img class="img-fluid" src="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" alt="">
                 </a>
             </div>
+            -->
         </div>
     </div>
 
