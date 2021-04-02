@@ -25,10 +25,12 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->integer('id_rol')->nullable();
             $table->integer('id_persona')->nullable();
+            $table->integer('id_categoria')->nullable();
             $table->string('usu_estado')->nullable();
 
             $table->foreign('id_rol')->references('id')->on('rol');
             $table->foreign('id_persona')->references('id')->on('persona');
+            $table->foreign('id_categoria')->references('id')->on('categoria');
         });
     }
 
