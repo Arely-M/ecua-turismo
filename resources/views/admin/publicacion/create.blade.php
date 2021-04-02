@@ -42,7 +42,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-                    <textarea class="form-control" name="descripcion" rows="6" required></textarea>
+                    <textarea id="editor" class="form-control" name="descripcion" rows="6" required></textarea>
                     <div class="valid-feedback">
                         ¡Luce bien!
                     </div>
@@ -127,4 +127,15 @@
         }, false);
     })();
 </script>
+<!--<script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
+<script>
+    console.log('Hi!');
+</script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>-->
 @stop

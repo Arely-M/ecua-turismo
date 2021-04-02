@@ -30,7 +30,7 @@
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">LUGARES</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="/galeria" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
                     </ul>
                 </div>
             </nav>
@@ -44,17 +44,20 @@
         <div class="d-flex flex-column bd-highlight">
             <h1 class="post-title text-center mt-4">{{$publicaciones->titulo}}</h1>
             <p class="text-danger font-weight-bold">{{$publicaciones->ubicacion}}</p>
-            <p  class="text-justify" style="white-space: pre-wrap">{{$publicaciones->descripcion}}</p>
+            <!--<pre class="text-justify" style="white-space: pre-wrap">{{$publicaciones->descripcion}}</pre>-->
+            <p>Video de youtube</p>
+            <p><?php echo $publicaciones->descripcion ?></p>
+            <!--<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ecuadorturisticoec/video/6941022247742196998" data-video-id="6941022247742196998" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@ecuadorturisticoec" href="https://www.tiktok.com/@ecuadorturisticoec">@ecuadorturisticoec</a> <p><a title="salinas_ecuador🇪🇨" target="_blank" href="https://www.tiktok.com/tag/salinas_ecuador%F0%9F%87%AA%F0%9F%87%A8">##salinas_ecuador🇪🇨</a> 😍 📷:Isaac Rivera</p> <a target="_blank" title="♬ Umbrella - Vl4s" href="https://www.tiktok.com/music/Umbrella-6757476750269106177">♬ Umbrella - Vl4s</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>-->
         </div>
     </main>
 
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <div class="brand">
-                <h1><span>S</span>haif <span>A</span>rfan</h1>
-            </div>
-            <h2>Your Complete Web Solution</h2>
+            <a href="#hero">
+                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+            </a>
+            <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
                     <a href="https://www.facebook.com/Ecua-Turismo-101221585389347" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
@@ -69,7 +72,7 @@
                     <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
                 </div>
             </div>
-            <p>Copyright © 2020 Arfan. All rights reserved</p>
+            <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>
         </div>
     </footer>
     <!-- End Footer -->

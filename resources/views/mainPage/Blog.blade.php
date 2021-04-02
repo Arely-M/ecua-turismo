@@ -30,7 +30,7 @@
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="/galeria" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
                     </ul>
                 </div>
             </nav>
@@ -53,6 +53,7 @@
                         <div class="card-body information-publication">
                             <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
                             <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
+                            <!--<p class="publication-description">{{$publicacion->descripcion}}</p>-->
                             <p class="publication-description">{{$publicacion->descripcion}}</p>
                             <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
                         </div>
@@ -73,10 +74,10 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <div class="brand">
-                <h1><span>S</span>haif <span>A</span>rfan</h1>
-            </div>
-            <h2>Your Complete Web Solution</h2>
+            <a href="#hero">
+                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+            </a>
+            <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
                     <a href="https://www.facebook.com/Ecua-Turismo-101221585389347" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
@@ -91,7 +92,7 @@
                     <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
                 </div>
             </div>
-            <p>Copyright © 2020 Arfan. All rights reserved</p>
+            <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>
         </div>
     </footer>
     <!-- End Footer -->
