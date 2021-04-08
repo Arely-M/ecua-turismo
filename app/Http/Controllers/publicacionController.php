@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\publicacion;
 use App\Models\provincias;
+use App\Models\categoria;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StorePublicacionRequest;
 
@@ -49,7 +50,8 @@ class publicacionController extends Controller
     public function create()
     {
         $provincia = provincias::all();
-        return view ('admin/publicacion/create',  ['provincias' => $provincia]);
+        $categoria = categoria::all();
+        return view ('admin/publicacion/create',  ['provincias' => $provincia], ['categorias' => $categoria]);
     }
 
     /**

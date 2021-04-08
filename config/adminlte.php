@@ -248,6 +248,11 @@ return [
             'icon' => 'fas fa-city',
         ],
         [
+            'text' => 'Categoría',
+            'url'  => '/category',
+            'icon' => 'fas fa-archive',
+        ],
+        [
             'text' => 'Publicaciones',
             'url'  => 'publicacion',
             'icon' => 'fas fa-fw fa-book',
