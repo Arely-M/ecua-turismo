@@ -20,8 +20,10 @@ class CreatePublicacion extends Migration
             $table->text('descripcion');
             $table->string('imagen');
             $table->integer('id_provincia');
+            $table->integer('id_categoria')->nullable();
             
             $table->foreign('id_provincia')->references('id')->on('provincias');
+            $table->foreign('id_categoria')->references('id')->on('categoria');
         });
     }
 
