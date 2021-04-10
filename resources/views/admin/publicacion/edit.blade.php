@@ -38,13 +38,44 @@
                         Ingrese una dirección válida
                     </div>
                 </div>
-                <div class="form-group col-md-4 p-0">
-                    <label for="provincia_id">Provincia</label>
-                    <select id="inputState" class="form-control" name="provincia_id">
-                        @foreach ($provincias as $provincia)
-                        <option value="{{ $provincia->id }}">{{$provincia->nombre}}</option>
-                        @endforeach
-                    </select>
+                <div class="row justify-content-between p-3">
+                    <div class="form-group col-md-5 p-0">
+                        <label for="provincia_id">Provincia</label>
+                        <select id="inputState" class="custom-select" name="provincia_id" required>
+                            <option selected disabled value="">Elegir una provincia</option>
+                            @foreach ($provincias as $provincia)
+                            <option value="{{ $provincia->id }}">{{$provincia->nombre}}</option>
+                            @endforeach
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor seleccione una provincia.
+                        </div>
+                    </div>
+                    <div class="form-group col-md-5 p-0">
+                        <label for="id">Categoría</label>
+                        <select id="inputState" class="custom-select" name="id" required>
+                            <option selected disabled value="">Elegir una categoria</option>
+                            @foreach ($categorias as $categoria)
+                            <option value="{{ $categoria->id }}">{{$categoria->nombre_categoria}}</option>
+                            @endforeach
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor seleccione una categoría.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Resumen</label>
+                    <!--<textarea id="editor" class="form-control" name="descripcion" rows="6" required></textarea>-->
+                    <textarea class="form-control" name="resumen" rows="3" require>
+                        {!!$publicacion->resumen!!}
+                    </textarea>
+                    <div class="valid-feedback">
+                        ¡Luce bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese un resumen válido
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
@@ -159,6 +190,7 @@ function cambiarImagen(event) {
         ],
         toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
         relative_urls: false,
+        //image_dimensions: false,
         file_browser_callback: function(field_name, url, type, win) {
             var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
             var y = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
@@ -175,12 +207,26 @@ function cambiarImagen(event) {
                 title: 'Filemanager',
                 width: x * 0.8,
                 height: y * 0.8,
-                resizable: "yes",
-                close_previous: "no"
+                resizable: "no",
+                close_previous: "no",
             });
-        }
-    };
+        },
+        setup: function (editor) {
+            editor.on('init', function(args) {
+                editor = args.target;
 
+                editor.on('NodeChange', function(e) {
+                    if (e && e.element.nodeName.toLowerCase() == 'img') {
+                        width = e.element.width;
+                        height = e.element.height;
+                        //tinyMCE.DOM.setAttribs(e.element, {'width': null, 'height': null});
+                        tinyMCE.DOM.setAttribs(e.element, 
+                            {'style': 'width:' + width + 'px; height:' + height + 'px;'});
+                    }
+                });
+            });
+        }  
+    };
     tinymce.init(editor_config);
 </script>
 @stop

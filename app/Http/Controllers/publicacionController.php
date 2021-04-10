@@ -23,11 +23,23 @@ class publicacionController extends Controller
         return view ('admin/publicacion/index', ['publicaciones' => $publicacion]);
     }
 
+    public function welcome() {
+        $publicacion = publicacion::where('id_categoria',1)->orderBy('id')->paginate(4);
+        return view ('welcome', ['publicaciones' => $publicacion]);
+    }
+
     public function blog()
     {
         //$publicacion = publicacion::orderBy('id', 'desc')->limit(2)->get();
         $publicacion = publicacion::paginate(6);
         return view ('mainPage/Blog', ['publicaciones' => $publicacion]);
+    }
+
+    public function gastronomia()
+    {
+        //$publicacion = publicacion::orderBy('id', 'desc')->limit(2)->get();
+        $publicacion = publicacion::where('id_categoria',2)->paginate(6);
+        return view ('mainPage/gastronomia', ['publicaciones' => $publicacion]);
     }
 
     public function galeria()
@@ -51,7 +63,7 @@ class publicacionController extends Controller
     {
         $provincia = provincias::all();
         $categoria = categoria::all();
-        return view ('admin/publicacion/create',  ['provincias' => $provincia], ['categorias' => $categoria]);
+        return view ('admin/publicacion/create', ['provincias' => $provincia], ['categorias' => $categoria]);
     }
 
     /**
@@ -67,6 +79,7 @@ class publicacionController extends Controller
         $publicacion = new  publicacion();
         $publicacion->titulo = $request->get('titulo');
         $publicacion->ubicacion = $request->get('ubicacion');
+        $publicacion->resumen = $request->get('resumen');
         $publicacion->descripcion = $request->get('descripcion');
         //$imagen = $request->file('imagen')->store('public/imagenes');
         //$publicacion->imagen = Storage::url($imagen);
@@ -74,6 +87,7 @@ class publicacionController extends Controller
             $publicacion['imagen'] = $request->file('imagen')->store('imagenes','public');
         }
         $publicacion->id_provincia = $request->get("provincia_id");
+        $publicacion->id_categoria = $request->get("id");
         $publicacion->save();
         return redirect('publicacion')->with("info","¡Se ha creado la publicación exitosamente!");
     }
@@ -121,8 +135,13 @@ class publicacionController extends Controller
      */
     public function edit(publicacion $publicacion)
     {
-        $provincia = provincias::all();
-        return view ('admin/publicacion/edit', ['publicacion' => $publicacion], ['provincias' => $provincia]);
+        /*$provincia = provincias::all();
+        $categoria = categoria::all();
+        return view ('admin/publicacion/edit', ['publicacion' => $publicacion], ['provincias' => $provincia], ['categorias' => $categoria]);
+        */
+        $provincias = provincias::all();
+        $categorias = categoria::all();
+        return view ('admin/publicacion/edit', compact('publicacion', 'provincias', 'categorias'));
     }
 
     /**

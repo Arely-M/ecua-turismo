@@ -29,7 +29,8 @@
                         <li><a href="/" data-after="Home">INICIO</a></li>
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
-                        <li><a href="#about" data-after="About">NOSOTROS</a></li>
+                        <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
+                        <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
                     </ul>
                 </div>
@@ -61,21 +62,27 @@
         </div>
         @endforeach
     </main>-->
-    <main class="min-vh-100 mr-auto ml-auto" style="margin-top: 14rem; width: 80%;">
+    <main class="min-vh-100 mr-auto ml-auto" style="margin-top: 14rem; width: 100%;">
         <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
             <h2 class="publication-title text-center">{{$provincias->nombre}}</h2>
         </div>
-        <div class="row row-cols-1 row-cols-md-2">
+        <div class="container">
             @foreach ($publicaciones as $publicacion)
-            <div class="col mb-4">
-                <div class="bg-dark text-white">
-                    <img src="{{asset('storage').'/'.$publicacion->imagen}}" class="card-img img-fluid" alt="imagen de la publicacion" style="filter: brightness(60%);">
-                    <div class="card-img-overlay p-5">
-                        <h2 class="card-title">{{$publicacion->titulo}}</h1>
-                        <p class="card-text publication-description text-light">{{$publicacion->descripcion}}</p>
-                        <a type="button" class="btn btn-outline-light" href="{{route('publicaciones.show', $publicacion)}}" style="font-size: 1.5rem;">Ver más</a>
+            <!--<div class="col mb-4">
+                <div class="card">
+                    <img src="{{asset('storage').'/'.$publicacion->imagen}}" class="card-img-top" alt="..." style="height: 50vh">
+                    <div class="card-body">
+                        <h5 class="publication-title">{{$publicacion->titulo}}</h5>
+                        <p class="publication-description">{{$publicacion->resumen}}</p>
+                        <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
                     </div>
                 </div>
+            </div>-->
+            <div class="card">
+                <img src="{{asset('storage').'/'.$publicacion->imagen}}">
+                <h2>{{$publicacion->titulo}}</h2>
+                <p class="publication-description">{{$publicacion->resumen}}</p>
+                <a href="{{route('publicaciones.show', $publicacion)}}">Leer más</a>
             </div>
             @endforeach
         </div>
@@ -108,5 +115,54 @@
     <!-- End Footer -->
     <script src="../js/index.js"></script>
 </body>
+<style>
 
+.container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #3498db;
+}
+</style>
 </html>

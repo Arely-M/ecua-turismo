@@ -9,20 +9,23 @@ use App\Http\Controllers\publicacionController;
 use App\Http\Controllers\usuarioController;
 use App\Http\Controllers\categoriaController;
 
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
-Route::get('contacto', function () {
-    return view('mainPage.contacto');
+Route::get('/', [PublicacionController::class, 'welcome']);
+
+Route::get('nosotros', function () {
+    return view('mainPage.Nosotros');
 });
-
 
 Route::get('destinos', [provinciasController::class, 'showDestinos']);
 Route::resource('provincias', provinciasController::class);
 Route::get('categoria/{provincia}', [PublicacionController::class, 'filtrar'])->name('publicaciones.filtrar');
 Route::get('post/{publicacion}', [publicacionController::class, 'post'])->name('publicaciones.show');
+Route::get('gastronomia', [publicacionController::class, 'gastronomia'])->name('gastronomia');
 Route::resource('rol', rolController::class);
 Route::resource('permiso', permisoController::class);
 Route::resource('persona', personaController::class);

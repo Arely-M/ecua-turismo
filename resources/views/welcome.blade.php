@@ -29,7 +29,8 @@
                         <li><a href="/" data-after="Home">INICIO</a></li>
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
-                        <li><a href="#about" data-after="About">NOSOTROS</a></li>
+                        <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
+                        <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
                     </ul>
                 </div>
@@ -60,6 +61,25 @@
             </div>
         </div>
     </section>
+    @if($publicaciones->count())
+    <section class="w-100">
+        <div class="content-card m-auto row">
+            @foreach($publicaciones as $publicacion)
+            <div class="col-sm-3 mb-4 rounded">
+                <div class="card card-target rounded">
+                    <img class="card-img-top" src="{{asset('storage').'/'.$publicacion->imagen}}" alt="Card image cap" style="height: 30vh;">
+                    <div class="card-body" style="height: 35vh;">
+                        <h5 class="card-title h3">{{$publicacion->titulo}}</h5>
+                        <p class="publication-description">{{$publicacion->resumen}}</p>
+                        <a href="{{route('publicaciones.show', $publicacion)}}" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </section>
+    @endif
+    <!--
     <section class="w-100">
         <div class="content-card m-auto row">
             <div class="col-sm-3 mb-4 rounded">
@@ -112,7 +132,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End Service Section -->
 
 
@@ -154,7 +174,7 @@
     </div>
     <!-- Projects Section -->
     <section id="projects">
-        <div class="projects container-page bg-info">
+        <div class="projects container-page">
             <div class="projects-header">
                 <h1 class="section-title">OTROS <span>LUGARES</span></h1>
             </div>
@@ -198,7 +218,7 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="contact container-page">
+        <div class="contact" style="height: 60vh;">
             <div>
                 <h1 class="section-title">CONTACT <span>INFO</span></h1>
             </div>

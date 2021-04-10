@@ -17,6 +17,7 @@ class CreatePublicacion extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('ubicacion');
+            $table->text('resumen');
             $table->text('descripcion');
             $table->string('imagen');
             $table->integer('id_provincia');

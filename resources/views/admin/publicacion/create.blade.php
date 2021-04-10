@@ -42,8 +42,8 @@
                         </div>
                     </div>
                     <div class="form-group col-md-5 p-0">
-                        <label for="provincia_id">Categoría</label>
-                        <select id="inputState" class="custom-select" name="provincia_id" required>
+                        <label for="id">Categoría</label>
+                        <select id="inputState" class="custom-select" name="id" required>
                             <option selected disabled value="">Elegir una categoria</option>
                             @foreach ($categorias as $categoria)
                             <option value="{{ $categoria->id }}">{{$categoria->nombre_categoria}}</option>
@@ -54,7 +54,17 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Resumen</label>
+                    <!--<textarea id="editor" class="form-control" name="descripcion" rows="6" required></textarea>-->
+                    <textarea class="form-control" name="resumen" rows="3" require></textarea>
+                    <div class="valid-feedback">
+                        ¡Luce bien!
+                    </div>
+                    <div class="invalid-feedback">
+                        Ingrese un resumen válido
+                    </div>
+                </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
                     <!--<textarea id="editor" class="form-control" name="descripcion" rows="6" required></textarea>-->
@@ -173,22 +183,31 @@
                 width: x * 0.8,
                 height: y * 0.8,
                 resizable: "yes",
-                close_previous: "no"
+                close_previous: "yes",
+                image_dimensions: false
             });
-        }
+        },
+        setup: function (editor) {
+            editor.on('init', function(args) {
+                editor = args.target;
+
+                editor.on('NodeChange', function(e) {
+                    if (e && e.element.nodeName.toLowerCase() == 'img') {
+                        width = e.element.width;
+                        height = e.element.height;
+                        console.log("ancho: "+width);
+                        console.log("altura: "+height);
+                        if(width !== 0 && height !==0) {
+                            tinyMCE.DOM.setAttribs(e.element, {'width': null, 'height': null});
+                            tinyMCE.DOM.setAttribs(e.element, 
+                                {'style': 'width:' + width + 'px; height:' + height + 'px;'});
+                        }
+                    }
+                });
+            });
+        }  
     };
 
     tinymce.init(editor_config);
 </script>
-<!--<script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
-<script>
-    console.log('Hi!');
-</script>
-<script>
-    ClassicEditor
-        .create(document.querySelector('#editor'))
-        .catch(error => {
-            console.error(error);
-        });
-</script>-->
 @stop

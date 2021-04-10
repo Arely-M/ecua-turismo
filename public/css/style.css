@@ -643,7 +643,7 @@ p {
 	/* contact  */
 	#contact .contact {
 		flex-direction: column;
-		padding: 100px 0;
+		padding: 40px 0;
 		align-items: center;
 		justify-content: center;
 		min-width: 20vh;
@@ -871,10 +871,10 @@ p {
 .publication-description {
 	display: block;
 	display: -webkit-box;
-	height: 1.9rem * 1.2 * 3;
+	height: 1.9rem * 1.2 * 4;
     font-size: 1.9rem;
     line-height: 1.5;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -906,7 +906,7 @@ p {
 }
 
 .post-content {
-	width: 65%
+	width: 75%
 }
 
 .post-image {

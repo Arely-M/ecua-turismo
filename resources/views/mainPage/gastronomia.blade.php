@@ -44,22 +44,10 @@
             <h2 class="publication-title">últimos posts</h2>
         </div>
         <main class="d-flex align-items-start flex-column bd-highlight mb-3">
-            
-                @foreach ($publicaciones as $publicacion)
-                <!--<div class="col mb-4">
-                    <div class="card">
-                        <img src="{{asset('storage').'/'.$publicacion->imagen}}" class="publication-image" alt="...">
-                        <div class="card-body">
-                            <h2 class="card-title publication-title">{{$publicacion->titulo}}</h>
-                            <p class="publication-description text-danger"><small class="text-danger">{{$publicacion->ubicacion}}</small></p>
-                        </div>
-                        <div class="w-100 p-3">
-                            <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                        </div>
-                    </div>
-                </div>-->
-                <div class="p-2 bd-highlight content-publication mr-auto ml-auto mb-4">
-                    <div class="row no-gutters">
+
+            @foreach ($publicaciones as $publicacion)
+            <div class="p-2 bd-highlight container mr-auto ml-auto mb-4">
+                <!--<div class="row no-gutters">
                         <div class="col-md-5">
                             <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
                         </div> 
@@ -71,9 +59,27 @@
                                 <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
                             </div>
                         </div>
+                    </div>-->
+                <!--<div class="col mb-4">
+                    <div class="card">
+                        <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$publicacion->titulo}}</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="property-card">
+                    <a  href="{{route('publicaciones.show', $publicacion)}}">
+                        <img class="property-image"  src="{{asset('storage').'/'.$publicacion->imagen}}">
+                    </a>
+                    <div class="property-description">
+                        <h3> {{$publicacion->titulo}}</h3>
+                        <p class="gastronomy-descripcion">{{$publicacion->resumen}}</p>
                     </div>
                 </div>
-                @endforeach
+            </div>
+            @endforeach
         </main>
         <div class="content-publication ml-auto mr-auto" style="font-size: 1.5rem;">
             {{$publicaciones->links()}}
@@ -112,4 +118,90 @@
     <script src="../js/index.js"></script>
 </body>
 
+<style>
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .gastronomy-descripcion {
+        display: block;
+        display: -webkit-box;
+        height: 1.6rem * 1.2 * 2;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: justify;
+    }
+
+    .property-card {
+        height: 33rem;
+        width: 43rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        border-radius: 16px;
+        overflow: hidden;
+        -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+        box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+    }
+
+    .property-image {
+        height: 22rem;
+        width: 43rem;
+        position: Absolute;
+        top: 0px;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .property-description {
+        background-color: #FAFAFC;
+        height: 10rem;
+        width: 43rem;
+        position: absolute;
+        bottom: 0em;
+        -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        padding: 0.5em 1em;
+        text-align: center;
+    }
+
+    .property-card:hover .property-description {
+        height: 0em;
+        padding: 0px 1em;
+    }
+
+    .property-card:hover .property-image {
+        height: 33rem;
+    }
+
+    .property-card:hover .property-social-icons {
+        background-color: white;
+    }
+
+    .property-card:hover .property-social-icons:hover {
+        background-color: blue;
+        cursor: pointer;
+    }
+</style>
 </html>

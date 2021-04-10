@@ -271,7 +271,7 @@ return [
         */
         ['header' => 'CONFIGURAR CUENTA'],
         [
-            'text' => 'profile',
+            'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],

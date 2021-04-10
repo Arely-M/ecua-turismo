@@ -29,7 +29,8 @@
                         <li><a href="/" data-after="Home">INICIO</a></li>
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">LUGARES</a></li>
-                        <li><a href="#about" data-after="About">NOSOTROS</a></li>
+                        <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
+                        <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
                     </ul>
                 </div>
@@ -44,10 +45,8 @@
         <div class="d-flex flex-column bd-highlight">
             <h1 class="post-title text-center mt-4">{{$publicaciones->titulo}}</h1>
             <p class="text-danger font-weight-bold">{{$publicaciones->ubicacion}}</p>
-            <!--<pre class="text-justify" style="white-space: pre-wrap">{{$publicaciones->descripcion}}</pre>-->
             <p>Video de youtube</p>
-            <p><?php echo $publicaciones->descripcion ?></p>
-            <!--<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ecuadorturisticoec/video/6941022247742196998" data-video-id="6941022247742196998" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@ecuadorturisticoec" href="https://www.tiktok.com/@ecuadorturisticoec">@ecuadorturisticoec</a> <p><a title="salinas_ecuador🇪🇨" target="_blank" href="https://www.tiktok.com/tag/salinas_ecuador%F0%9F%87%AA%F0%9F%87%A8">##salinas_ecuador🇪🇨</a> 😍 📷:Isaac Rivera</p> <a target="_blank" title="♬ Umbrella - Vl4s" href="https://www.tiktok.com/music/Umbrella-6757476750269106177">♬ Umbrella - Vl4s</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>-->
+            <div><?php echo $publicaciones->descripcion ?></div>
         </div>
     </main>
 

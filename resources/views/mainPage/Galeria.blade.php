@@ -54,6 +54,7 @@
                         <li><a href="/" data-after="Home">INICIO</a></li>
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
+                        <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
                         <li><a href="#about" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">CONTACTO</a></li>
                     </ul>
@@ -76,42 +77,42 @@
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/columpio del fin del mundo, Baños de Agua Santa. Provincia de Tungurahua.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="/img/galeria/columpio del fin del mundo, Baños de Agua Santa. Provincia de Tungurahua.jpg" alt="">
+                    <img class="" src="/img/galeria/columpio del fin del mundo, Baños de Agua Santa. Provincia de Tungurahua.jpg" alt="">
                 </a>
             </div>
             <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/el muercielago.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/el muercielago.jpg" alt="">
+                    <img class="" src="img/galeria/el muercielago.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/Lago San Pablo, Otavalo,  Imbabura.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/Lago San Pablo, Otavalo,  Imbabura.jpg" alt="">
+                    <img class="" src="img/galeria/Lago San Pablo, Otavalo,  Imbabura.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/laguna de quilotoa.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/laguna de quilotoa.jpg" alt="">
+                    <img class="" src="img/galeria/laguna de quilotoa.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/Mirador mira mera, Mera, Pastaza, Ecuador-2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/Mirador mira mera, Mera, Pastaza, Ecuador-2.jpg" alt="">
+                    <img class="" src="img/galeria/Mirador mira mera, Mera, Pastaza, Ecuador-2.jpg" alt="">
                 </a>
             </div>
             <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/salinas2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/salinas2.jpg" alt="">
+                    <img class="" src="img/galeria/salinas2.jpg" alt="">
                 </a>
             </div>
-            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+            <div class="item lap col-lg-3 col-md-4 col-6 col-sm bg-prim">
                 <a href="img/galeria/Tarabita Manto de la Novia, Baños de Agua Santa. Provincia de Tungurahua 2.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/Tarabita Manto de la Novia, Baños de Agua Santa. Provincia de Tungurahua 2.jpg" alt="">
+                    <img class="" src="img/galeria/Tarabita Manto de la Novia, Baños de Agua Santa. Provincia de Tungurahua 2.jpg" alt="">
                 </a>
             </div>
             <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                 <a href="img/galeria/Volcan Cotopaxi 2 - Latacunga, Provincia de Cotopaxi, República de Ecuador.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="img/galeria/Volcan Cotopaxi 2 - Latacunga, Provincia de Cotopaxi, República de Ecuador.jpg" alt="">
+                    <img class="" src="img/galeria/Volcan Cotopaxi 2 - Latacunga, Provincia de Cotopaxi, República de Ecuador.jpg" alt="">
                 </a>
             </div>
             <!--
