@@ -166,5 +166,6 @@ return [
      */
     'php_ini_overrides'        => [
         'memory_limit' => '256M',
+        'upload_tmp_dir' => "C:\Users\Adminitrador\AppData\Local\Temp" 
     ],
 ];

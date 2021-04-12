@@ -48,10 +48,10 @@
             Para que no te marees con tanto contenido aquí podrás organizarte por continentes y países. Haz click en el mapa o en la lista de países para encontrar todo lo que necesitas para tu viaje.</p>
             <h3 class="h1 text-center font-weight-bold">Provincias para visitar</h3>
         </div>
-        <div>
+        <div class="d-flex justify-content-center">
             @foreach ($provincias as $provincia)
             <nav class="nav flex-comun">
-                <a type="button" href="{{route('publicaciones.filtrar', $provincia)}}" style="font-size: 2rem;" class="text-decoration-none">{{$provincia->nombre}}</a>
+                <a type="button" href="{{route('publicaciones.filtrar', $provincia)}}" style="font-size: 2rem;" class="text-decoration-none m-4">{{$provincia->nombre}}</a>
             </nav>
             @endforeach
         </div>
@@ -65,9 +65,11 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <a href="#hero">
-                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
-            </a>
+            <div class="brand">
+                <a href="/" class="text-decoration-none">
+                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                </a>
+            </div>
             <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
@@ -77,10 +79,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

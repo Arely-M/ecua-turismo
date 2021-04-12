@@ -39,14 +39,12 @@
     </header>
     <!-- End Header -->
     @if($publicaciones->count())
-    <div class="min-vh-100">
-        <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
-            <h2 class="publication-title">últimos posts</h2>
+    <div class="min-vh-100 w-100">
+        <div class="content-publication ml-auto mr-auto text-center" style="margin-top: 14rem">
+            <h2 class="publication-title">Disfruta de la rica gastronomìa del Ecuador</h2>
         </div>
-        <main class="d-flex align-items-start flex-column bd-highlight mb-3">
-
+        <main class="container-gastronomy bd-highlight mb-3">
             @foreach ($publicaciones as $publicacion)
-            <div class="p-2 bd-highlight container mr-auto ml-auto mb-4">
                 <!--<div class="row no-gutters">
                         <div class="col-md-5">
                             <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
@@ -78,11 +76,12 @@
                         <p class="gastronomy-descripcion">{{$publicacion->resumen}}</p>
                     </div>
                 </div>
-            </div>
             @endforeach
         </main>
-        <div class="content-publication ml-auto mr-auto" style="font-size: 1.5rem;">
-            {{$publicaciones->links()}}
+        <div class="ml-auto mr-auto row justify-content-center" style="font-size: 1.9rem;">
+            <div>
+                {{$publicaciones->links()}}
+            </div>
         </div>
     </div>
     @else
@@ -93,9 +92,11 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <a href="#hero">
-                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
-            </a>
+            <div class="brand">
+                <a href="/" class="text-decoration-none">
+                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                </a>
+            </div>
             <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
@@ -105,10 +106,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>
@@ -119,13 +117,13 @@
 </body>
 
 <style>
-    .container{
-        width: 100%;
-        max-width: 1200px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: auto;
+    .container-gastronomy{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
     }
 
     .gastronomy-descripcion {
@@ -142,8 +140,8 @@
     }
 
     .property-card {
-        height: 33rem;
-        width: 43rem;
+        height: 330px;
+        width: 400px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -156,6 +154,7 @@
         -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
         transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
         border-radius: 16px;
+        margin: 20px;
         overflow: hidden;
         -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
         box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;

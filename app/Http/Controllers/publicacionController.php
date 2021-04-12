@@ -31,7 +31,7 @@ class publicacionController extends Controller
     public function blog()
     {
         //$publicacion = publicacion::orderBy('id', 'desc')->limit(2)->get();
-        $publicacion = publicacion::paginate(6);
+        $publicacion = publicacion::where('id_categoria',1)->orderBy('id')->paginate(6);
         return view ('mainPage/Blog', ['publicaciones' => $publicacion]);
     }
 

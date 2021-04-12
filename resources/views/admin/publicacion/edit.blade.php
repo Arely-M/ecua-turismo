@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Título</label>
                     <input type="text" class="form-control" name="titulo" aria-describedby="emailHelp"
-                        value="{{$publicacion->titulo}}" required>>
+                        value="{{$publicacion->titulo}}" required>
                     <div class="valid-feedback">
                         ¡Luce bien!
                     </div>
@@ -67,8 +67,7 @@
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Resumen</label>
                     <!--<textarea id="editor" class="form-control" name="descripcion" rows="6" required></textarea>-->
-                    <textarea class="form-control" name="resumen" rows="3" require>
-                        {!!$publicacion->resumen!!}
+                    <textarea class="form-control" name="resumen" rows="3" require>{!!$publicacion->resumen!!}
                     </textarea>
                     <div class="valid-feedback">
                         ¡Luce bien!
@@ -108,8 +107,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleFormControlFile1">Cargar imagen</label>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Esta imagen se mostrara como principal en la publicación</p>
                                     <input id="imagen-file" type="file" class="form-control-file" name="imagen"
                                         accept="image/*" value="{{$publicacion->imagen}}">
                                     @error('imagen')

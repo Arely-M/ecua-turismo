@@ -86,14 +86,19 @@
             </div>
             @endforeach
         </div>
+        <div class="content-publication ml-auto mr-auto" style="font-size: 1.6rem;">
+            {{$publicaciones->links()}}
+        </div>
     </main>
 
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <a href="#hero">
-                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
-            </a>
+            <div class="brand">
+                <a href="/" class="text-decoration-none">
+                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                </a>
+            </div>
             <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
@@ -103,10 +108,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

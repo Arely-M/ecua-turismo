@@ -52,8 +52,7 @@
                         <h5>Denise Martinez <br />
                             <span> Project Manager </span>
                         </h5>
-                        <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit quo minus id quod maxime placeat ” </p>
+                        <p class="card-text">“ Estudiante de la Carrera de Tecnologías de La Informacipon en la Universidad Tècnica de Machala ” </p>
                     </div>
                 </div>
             </div>
@@ -63,8 +62,7 @@
                         <h5>Gustavo Hidalgo<br />
                             <span> Diseñador, Programador </span>
                         </h5>
-                        <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit quo minus id quod maxime placeat ” </p>
+                        <p class="card-text">“ Estudiante de la Carrera de Tecnologías de La Informacipon en la Universidad Tècnica de Machala ” </p>
                     </div>
                 </div>
             </div>
@@ -74,19 +72,17 @@
                         <h5>Bryan Camacho<br />
                             <span> Diseñador, Programador </span>
                         </h5>
-                        <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit quo minus id quod maxime placeat ” </p>
+                        <p class="card-text">“ Estudiante de la Carrera de Tecnologías de La Informacipon en la Universidad Tècnica de Machala ” </p>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="card text-center"><img class="card-img-top" src="" alt="">
+                <div class="card text-center"><img class="card-img-top" src="img/nosotros/Joel Cujilema_recortado.jpeg" alt="">
                     <div class="card-body">
                         <h5>Joel Cujilemam<br />
                             <span> Programador </span>
                         </h5>
-                        <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                            impedit quo minus id quod maxime placeat ” </p>
+                        <p class="card-text">“ Estudiante de la Carrera de Tecnologías de La Informacipon en la Universidad Tècnica de Machala ” </p>
                     </div>
                 </div>
             </div>
@@ -96,9 +92,11 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <a href="#hero">
-                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
-            </a>
+            <div class="brand">
+                <a href="/" class="text-decoration-none">
+                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                </a>
+            </div>
             <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
@@ -108,10 +106,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

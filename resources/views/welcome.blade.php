@@ -136,41 +136,40 @@
     <!-- End Service Section -->
 
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/basin-4067637_1280.jpg" class="d-block w-100" alt="...">
+                <img src="img/Puente de Todos Santos.jpg" class="d-block w-100" alt="...">
                 <div class="card-img-overlay" style="padding: 70px 60px;">
                     <h5 class="card-title text-light slide-title">Visita las mejores<br>lugares de Cuenca</h5>
-                    <p class="card-text text-light slide-text">Vive una experiencia única e inolvidable.</p>
-                    <p class="card-text text-light slide-text">Last updated 3 mins ago</p>
-                    <button class="slide-btn btn-danger">Más información</button>
+                    <p class="card-text text-light slide-text">Puente de Todos Santos</p>
+                    <h1 class=" text-light slide-text font-italic">Vive una experiencia única e inolvidable.</h1>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/ecuador-774623_1280.jpg" class="d-block w-100" alt="...">
+                <img src="img/El Panecillo.jpeg" class="d-block w-100" alt="...">
                 <div class="card-img-overlay" style="padding: 70px 60px;">
-                    <h5 class="card-title text-light slide-title">Visita las mejores<br>lugares de Cuenca</h5>
+                    <h5 class="card-title text-light slide-title">Visita<br>El Panecillo</h5>
                     <p class="card-text text-light slide-text">Vive una experiencia única e inolvidable.</p>
-                    <p class="card-text text-light slide-text">Last updated 3 mins ago</p>
-                    <button class="slide-btn btn-danger">Más información</button>
+                    <!--<button class="slide-btn btn-danger">Más información</button>-->
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="img/mountains-6040906_1280.jpg" class="d-block w-100" alt="...">
                 <div class="card-img-overlay" style="padding: 70px 60px;">
-                    <h5 class="card-title text-light slide-title">Visita las mejores<br>lugares de Cuenca</h5>
-                    <p class="card-text text-light slide-text">Vive una experiencia única e inolvidable.</p>
-                    <p class="card-text text-light slide-text">Last updated 3 mins ago</p>
-                    <button class="slide-btn btn-danger">Más información</button>
+                    <h5 class="card-title text-light slide-title">Conoce la increíble<br>Ciudad de Quito</h5>
+                    <p class="card-text text-light slide-text font-italic">Visita el teleliférico y disfruta de <br> una experiencía única</p>
                 </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControlsNoTouching" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
     <!-- Projects Section -->
     <section id="projects">
@@ -199,18 +198,14 @@
         <div class="about container-page">
             <div class="col-left">
                 <div class="about-img">
-                    <img src="img/viajero.jpg" alt="img">
+                    <img src="img/Bollo_1280.jpg" alt="img">
                 </div>
             </div>
             <div class="col-right">
-                <h1 class="section-title">About <span>me</span></h1>
-                <h2>Front End Developer</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum
-                    beatae atque repellat ratione qui veritatis repudiandae adipisci maiores. At inventore
-                    necessitatibus deserunt exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia,
-                    accusamus provident suscipit magni! Expedita sint ad dolore, commodi labore nihil velit earum
-                    ducimus nulla quae nostrum fugit aut, deserunt reprehenderit libero enim!</p>
-                <a href="#" class="cta text-decoration-none">Download Resume</a>
+                <h1 class="section-title">Comída <span>Típica</span></h1>
+                <h2>Deleitate con los mejores manjares</h2>
+                <p>Conoce y disfruta de la mejor gastronomía Ecuatoriana de cada sitio turístico, sus extravagantes y peculiares sabores, únicos en todo el mundo, aprende de cada uno de sus platillos, su historia y sobre todo su tradición.</p>
+                <a href="/gastronomia" class="cta text-decoration-none">Leer más</a>
             </div>
         </div>
     </section>
@@ -227,8 +222,8 @@
                     <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
                     <div class="contact-info">
                         <h1>Teléfono</h1>
-                        <h2>+1 234 123 1234</h2>
-                        <h2>+1 234 123 1234</h2>
+                        <h2>+593 96 329 9700</h2>
+                        <h2>+593 95 899 6718</h2>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -243,7 +238,7 @@
                     <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
                     <div class="contact-info">
                         <h1>Dirección</h1>
-                        <h2>Fatikchhari, Chittagong, Bangladesh</h2>
+                        <h2>10ma Norte entre Colón y Buenavista</h2>
                     </div>
                 </div>
             </div>
@@ -254,9 +249,11 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="footer container-page">
-            <a href="#hero">
-                <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
-            </a>
+            <div class="brand">
+                <a href="/" class="text-decoration-none">
+                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                </a>
+            </div>
             <h2>Tu Guía de lugares turísticos</h2>
             <div class="social-icon">
                 <div class="social-item">
@@ -266,10 +263,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>
