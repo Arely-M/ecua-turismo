@@ -32,6 +32,7 @@
                         <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
                         <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
+                        <li><a href="/login" data-after="Contact" target="_blank">LOGIN</a></li>
                     </ul>
                 </div>
             </nav>
@@ -79,8 +80,8 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
-                </div>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
+                </div>PP
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>
         </div>

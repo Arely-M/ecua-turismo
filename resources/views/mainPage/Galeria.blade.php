@@ -55,8 +55,9 @@
                         <li><a href="/blog" data-after="Service">BLOG</a></li>
                         <li><a href="/destinos" data-after="Projects">DESTINOS</a></li>
                         <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
-                        <li><a href="#about" data-after="About">NOSOTROS</a></li>
-                        <li><a href="/galeria" data-after="Contact">CONTACTO</a></li>
+                        <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
+                        <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
+                        <li><a href="/login" data-after="Contact" target="_blank">LOGIN</a></li>
                     </ul>
                 </div>
             </nav>
@@ -66,7 +67,7 @@
     <div class="min-vh-100 text-center p-4" style="margin-top: 10rem;">
         <div class="row">
             <div class="col-lg-12 text-center my-2">
-                <h2>Observa los increíbles luagares turísticos que tiene el Ecuador</h2>
+                <h2>Observa los increíbles lugares turísticos que tiene el Ecuador</h2>
             </div>
         </div>
         <div class="portfolio-item row p-4">
@@ -216,66 +217,6 @@
                     <img class="img-fluid" src="https://image.freepik.com/free-psd/laptop-mockup-table-with-plants_23-2147955548.jpg" alt="">
                 </a>
             </div>
-            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/blank-colorful-adhesive-notes-against-wooden-wall-with-office-stationeries-laptop_23-2148052717.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/blank-colorful-adhesive-notes-against-wooden-wall-with-office-stationeries-laptop_23-2148052717.jpg" alt="">
-                </a>
-            </div>
-            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-psd/woman-using-laptop-smartphone_53876-76350.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-psd/woman-using-laptop-smartphone_53876-76350.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/young-couple-taking-selfie-mobile-phone-against-blue-background_23-2148056292.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/young-couple-taking-selfie-mobile-phone-against-blue-background_23-2148056292.jpg" alt="">
-                </a>
-            </div>
-            <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/close-up-blonde-woman-sitting-sofa-using-laptop-with-blank-white-screen_23-2148028738.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/close-up-blonde-woman-sitting-sofa-using-laptop-with-blank-white-screen_23-2148028738.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/group-happy-friends-taking-selfie-cellphone_23-2147859575.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/group-happy-friends-taking-selfie-cellphone_23-2147859575.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/joyful-pretty-girl-with-curly-hair-takes-selfie-mobile-phone_8353-6635.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/joyful-pretty-girl-with-curly-hair-takes-selfie-mobile-phone_8353-6635.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/attractive-young-woman-with-curly-hair-takes-selfie-posing-looking-camera_8353-6636.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/multiracial-group-young-people-taking-selfie_1139-1032.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/multiracial-group-young-people-taking-selfie_1139-1032.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/female-friends-sitting-car-hood-taking-self-portrait_23-2147855623.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/female-friends-sitting-car-hood-taking-self-portrait_23-2147855623.jpg" alt="">
-                </a>
-            </div>
-            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
-                <a href="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" class="fancylight popup-btn" data-fancybox-group="light">
-                    <img class="img-fluid" src="https://image.freepik.com/free-photo/two-smiling-girls-take-selfie-their-phones-posing-with-lollipops_8353-5600.jpg" alt="">
-                </a>
-            </div>
             -->
         </div>
     </div>
@@ -295,7 +236,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

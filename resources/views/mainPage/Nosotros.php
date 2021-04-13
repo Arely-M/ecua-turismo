@@ -36,6 +36,7 @@
                         <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
                         <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
+                        <li><a href="/login" data-after="Contact" target="_blank">LOGIN</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,7 +44,7 @@
     </header>
     <!-- End Hero Section  -->
 
-    <div class="gtco-testimonials" style="margin-top: 15rem;">
+    <div class="gtco-testimonials" style="margin-top: 15rem; height: 75vh">
         <h2 class="publication-title">Nuestro Equipo De Desarrollo</h2>
         <div class="owl-carousel owl-carousel1 owl-theme">
             <div>
@@ -80,7 +81,7 @@
                 <div class="card text-center"><img class="card-img-top" src="img/nosotros/Joel Cujilema_recortado.jpeg" alt="">
                     <div class="card-body">
                         <h5>Joel Cujilemam<br />
-                            <span> Programador </span>
+                            <span> Diseñador, Programador </span>
                         </h5>
                         <p class="card-text">“ Estudiante de la Carrera de Tecnologías de La Informacipon en la Universidad Tècnica de Machala ” </p>
                     </div>
@@ -94,7 +95,7 @@
         <div class="footer container-page">
             <div class="brand">
                 <a href="/" class="text-decoration-none">
-                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                    <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                 </a>
             </div>
             <h2>Tu Guía de lugares turísticos</h2>
@@ -106,7 +107,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

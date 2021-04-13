@@ -32,52 +32,19 @@
                         <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
                         <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
+                        <li><a href="/login" data-after="Contact" target="_blank">LOGIN</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
     <!-- End Header -->
-    <!--
-    <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
-        <h2 class="publication-title text-center">{{$provincias->nombre}}</h2>
-    </div>
-    <main class="container-page d-flex flex-column bd-highlight mb-3 mt-4">
-        @foreach ($publicaciones as $publicacion)
-        
-        <div class="p-2 bd-highlight content-publication mt-4">
-            <div class="row no-gutters">
-                <div class="col-md-5">
-                    <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
-                </div> 
-                <div class="col-md-7">
-                    <div class="card-body information-publication">
-                        <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
-                        <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
-                        <p class="publication-description">{{$publicacion->descripcion}}</p>
-                        <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </main>-->
     <main class="min-vh-100 mr-auto ml-auto" style="margin-top: 14rem; width: 100%;">
         <div class="content-publication ml-auto mr-auto" style="margin-top: 14rem">
             <h2 class="publication-title text-center">{{$provincias->nombre}}</h2>
         </div>
         <div class="container">
             @foreach ($publicaciones as $publicacion)
-            <!--<div class="col mb-4">
-                <div class="card">
-                    <img src="{{asset('storage').'/'.$publicacion->imagen}}" class="card-img-top" alt="..." style="height: 50vh">
-                    <div class="card-body">
-                        <h5 class="publication-title">{{$publicacion->titulo}}</h5>
-                        <p class="publication-description">{{$publicacion->resumen}}</p>
-                        <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                    </div>
-                </div>
-            </div>-->
             <div class="card">
                 <img src="{{asset('storage').'/'.$publicacion->imagen}}">
                 <h2>{{$publicacion->titulo}}</h2>
@@ -96,7 +63,7 @@
         <div class="footer container-page">
             <div class="brand">
                 <a href="/" class="text-decoration-none">
-                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                    <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                 </a>
             </div>
             <h2>Tu Guía de lugares turísticos</h2>
@@ -108,7 +75,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

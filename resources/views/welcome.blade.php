@@ -32,6 +32,7 @@
                         <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
                         <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
+                        <li><a href="/login" data-after="Contact" target="_blank">LOGIN</a></li>
                     </ul>
                 </div>
             </nav>
@@ -79,62 +80,6 @@
         </div>
     </section>
     @endif
-    <!--
-    <section class="w-100">
-        <div class="content-card m-auto row">
-            <div class="col-sm-3 mb-4 rounded">
-                <div class="card card-target rounded">
-                    <img class="card-img-top" src="img/lugar1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title h3">Vista el teliférico de Quito</h5>
-                        <p class="card-text">
-                            Observa la hermosa ciudad de Quito prácticamente desde el cielo
-                        </p>
-                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 mb-4 rounded">
-                <div class="card card-target">
-                    <img class="card-img-top" src="img/lugar2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title h3">Visita las Islas Galápagos</h5>
-                        <p class="card-text">
-                            Encuentra diversidad de especies marinas y disfruta los increíbles paísajes
-                        </p>
-                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 mb-4 rounded">
-                <div class="card card-target">
-                    <img class="card-img-top" src="img/lugar3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title h3">Malecón Simón Bolívar</h5>
-                        <p class="card-text">
-                            With supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 mb-4 rounded-3">
-                <div class="card card-target rounded-3">
-                    <img class="card-img-top rounded-3" src="img/lugar4.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title h3">Laguna de Quilotoa</h5>
-                        <p class="card-text">
-                            La lagunas de origen volcánico más hermosas del planeta ubicada en Cotopaxi
-                        </p>
-                        <a href="#" class="btn btn-primary" style="font-size:1.6rem; border-radius:0.5rem;">Ir al sitio</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- End Service Section -->
-
 
     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false" data-interval="false">
         <div class="carousel-inner">
@@ -251,7 +196,7 @@
         <div class="footer container-page">
             <div class="brand">
                 <a href="/" class="text-decoration-none">
-                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                    <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                 </a>
             </div>
             <h2>Tu Guía de lugares turísticos</h2>
@@ -263,7 +208,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>

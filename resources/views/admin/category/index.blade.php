@@ -38,9 +38,6 @@
                                     <td>
                                         <div class="w-100 row justify-content-center">
                                             <a class="btn btn-primary mr-2" href="{{route('category.edit', $categoria)}}">Editar</a>
-                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                                Eliminar
-                                            </button>
                                         </div>
                                     </td>
                                 </tr>

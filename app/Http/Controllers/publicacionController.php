@@ -49,7 +49,7 @@ class publicacionController extends Controller
 
     public function filtrar(provincias $provincia)
     {
-        $publicacion = publicacion::where('id_provincia', $provincia->id)->get();
+        $publicacion = publicacion::where('id_provincia', $provincia->id)->orderBy('id')->paginate(6);
         //return $publicacion;
         return view ('mainPage/lugares', ['publicaciones' => $publicacion], ['provincias' => $provincia]);
     }
@@ -92,25 +92,6 @@ class publicacionController extends Controller
         return redirect('publicacion')->with("info","¡Se ha creado la publicación exitosamente!");
     }
 
-    /*
-    public function store(StorePublicacionRequest $request)
-    {
-        //$publicacion = new  publicacion();
-        $publicacion = publicacion::create($request->except('_token'));
-        $publicacion->titulo = $request->get('titulo');
-        $publicacion->ubicacion = $request->get('ubicacion');
-        $publicacion->descripcion = $request->get('descripcion');
-        //$imagen = $request->file('imagen')->store('public/imagenes');
-        //$publicacion->imagen = Storage::url($imagen);
-        if($request->hasFile('imagen')){
-            $publicacion['imagen'] = $request->file('imagen')->store('imagenes','public');
-        }
-        $publicacion->id_provincia = $request->get("provincia_id");
-        $publicacion->save();
-        return redirect('publicacion')->with("info","¡Se ha creado la publicación exitosamente!");
-    }
-    */
-
     /**
      * Display the specified resource.
      *
@@ -135,10 +116,6 @@ class publicacionController extends Controller
      */
     public function edit(publicacion $publicacion)
     {
-        /*$provincia = provincias::all();
-        $categoria = categoria::all();
-        return view ('admin/publicacion/edit', ['publicacion' => $publicacion], ['provincias' => $provincia], ['categorias' => $categoria]);
-        */
         $provincias = provincias::all();
         $categorias = categoria::all();
         return view ('admin/publicacion/edit', compact('publicacion', 'provincias', 'categorias'));

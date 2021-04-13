@@ -32,6 +32,7 @@
                         <li><a href="/gastronomia" data-after="Contact">GASTRONOMÍA</a></li>
                         <li><a href="/nosotros" data-after="About">NOSOTROS</a></li>
                         <li><a href="/galeria" data-after="Contact">GALERÍA</a></li>
+                        <li><a href="/login" data-after="Contact" target="_blank">LOGIN</a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,28 +46,6 @@
         </div>
         <main class="container-gastronomy bd-highlight mb-3">
             @foreach ($publicaciones as $publicacion)
-                <!--<div class="row no-gutters">
-                        <div class="col-md-5">
-                            <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación">
-                        </div> 
-                        <div class="col-md-7">
-                            <div class="card-body information-publication">
-                                <p class="card-text text-danger"><small class="text-danger font-weight-bold">{{$publicacion->ubicacion}}</small></p>
-                                <h2 class="card-title publication-title mb-3">{{$publicacion->titulo}}</h2>
-                                <p class="publication-description">{{$publicacion->resumen}}</p>
-                                <a type="button" class="btn-publication" href="{{route('publicaciones.show', $publicacion)}}">Ver más</a>
-                            </div>
-                        </div>
-                    </div>-->
-                <!--<div class="col mb-4">
-                    <div class="card">
-                        <img src="{{asset('storage').'/'.$publicacion->imagen}}"  class="publication-image" alt="Miniatura de la publicación" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{$publicacion->titulo}}</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>-->
                 <div class="property-card">
                     <a  href="{{route('publicaciones.show', $publicacion)}}">
                         <img class="property-image"  src="{{asset('storage').'/'.$publicacion->imagen}}">
@@ -94,7 +73,7 @@
         <div class="footer container-page">
             <div class="brand">
                 <a href="/" class="text-decoration-none">
-                     <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
+                    <h1><span class="span-ecua">ECUA</span> <span class="span-turismo">TURIS</span>MO</h1>
                 </a>
             </div>
             <h2>Tu Guía de lugares turísticos</h2>
@@ -106,7 +85,7 @@
                     <a href="https://www.instagram.com/ecua_turismo_ec/" target="_blank"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
+                    <a href="https://www.tiktok.com/@ecuadorturisticoec?lang=es" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/tiktok.png"/></a>
                 </div>
             </div>
             <p>Copyright © 2021 Ecuaturismo. Todos los derechos reservados</p>
@@ -162,7 +141,7 @@
 
     .property-image {
         height: 22rem;
-        width: 43rem;
+        width: 40rem;
         position: Absolute;
         top: 0px;
         -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -175,7 +154,7 @@
     .property-description {
         background-color: #FAFAFC;
         height: 10rem;
-        width: 43rem;
+        width: 40rem;
         position: absolute;
         bottom: 0em;
         -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
